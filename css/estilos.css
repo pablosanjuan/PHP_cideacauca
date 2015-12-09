@@ -1,0 +1,163 @@
+@font-face{
+	font-family: normal-text;
+	src: url('../font/roboto/Roboto-Light.ttf');
+}
+
+@font-face{
+	font-family: tittle-text;
+	src: url('../font/roboto/Roboto-Light.ttf');
+}
+body{
+/*	background:#FEFEFE;*/
+	background-image: url("../images/mosaico.jpg");  
+}
+
+header {
+	color:#16a085;
+}
+
+.main {
+	background:#16a085;
+}
+
+.color1 {
+	background: #34495e;
+	color:#fff;
+}
+
+aside {
+	background:#c0392b;
+	color:#fff;
+}
+
+footer {
+	font-family: normal-text;
+	color:#000;
+}
+
+.divider-vertical-second-menu{
+   height: 20px;
+   width: 1px;
+   margin-top: 15px;
+   overflow: hidden;
+   background-color: #DDD;
+   border-right: 2px solid #FFF;
+}
+
+.item-nav{
+	font-size: 13px;
+	color: #fff !important;
+	font-family: tittle-text;
+}
+
+.fixed{
+	position: fixed !important;
+}
+
+.be-blue{
+	background: #00B287;
+	border: solid 2px #00B287;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+}
+
+.be-black{
+	border: solid 5px #00A858;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	background:#004137;
+}
+
+.be-dark-black{
+	background:#000;
+	color: #fff;
+}
+
+.normal-txt{
+	color: #fff;
+	font-family: tittle-text;
+}
+
+.animation-nav{
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	font-family: normal-text;
+}
+
+.animation-nav:hover {
+  color: #00B287;
+}
+
+.animation-nav:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #DBC600;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.animation-nav:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.trapecio-top {
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 40px solid #000;
+    z-index: -1;
+    margin-top: -40px;
+}
+
+.cabecera-facebook{
+	background: #45619D;
+	font-family: tittle-text;
+	color:#fff;
+	font-size: 20px;
+}
+
+.cabecera-twitter{
+	background: #54AAEC;
+	font-family: tittle-text;
+	color:#fff;
+	font-size: 20px;
+}
+
+.titulo-informativo{
+	font-family: tittle-text;
+	color:#16a085;
+	font-size: 20px;
+}
+
+.contenido-informativo{
+	font-family: normal-text;
+	color:#fff;
+	font-size: 15px;
+}
+
+.be-white{
+	background: #fff;
+}
+
+.centrado{
+	padding: 5px;
+}
+
+.horizontal{
+	list-style-type: none;
+	display: inline;
+    margin: 0;
+    padding: 0;
+}
