@@ -21,25 +21,18 @@ header {
 	color:#16a085;
 }
 
-
-
-aside {
-	background:#c0392b;
-	color:#fff;
-}
-
 footer {
 	font-family: tittle-text-regular;
 	color:#000;
 }
 
 .divider-vertical-second-menu{
-   height: 20px;
+   height: 10px;
    width: 1px;
-   margin-top: 15px;
+   margin-top: 27px;
    overflow: hidden;
    background-color: #DDD;
-   border-right: 2px solid #FFF;
+   border-right: 1px solid #FFF;
 }
 
 .mobile-item-nav{
@@ -167,13 +160,31 @@ footer {
 	background: #fff;
 }
 
-.centrado{
-	padding: 5px;
+.active-nav{
+	color: #00ffff;	
+}
+
+.degradado{
+	background: #2BBBAD;
 }
 
 .redes_sociales{
 	list-style-type: none;
-	display: inline-ñ;
+	display: inline;
     margin-top: 10px;
     padding: 0;
+}
+.largo-fijo{
+	height: 900px;
+	overflow-y: auto;
+}
+.content{
+	padding: 20px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	-o-border-radius: 11px;
+	-ms-border-radius: 11px;
+	border-radius: 11px;
+	background: #fff;
+	border: 2px solid #238C91;
 }
