@@ -18,6 +18,7 @@
     js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=863470693719288";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
+
 <!-- ................   NAVIGATION BAR   ........................-->
   <nav id="barra-nav" class="navbar-fixed" style="margin-bottom:10px;">
     <div class="nav-wrapper be-black z-depth-4">
@@ -59,8 +60,8 @@
     </ul>
   </div>
 <!-- ................   SLIDER   ........................-->
-  <div class="divider"></div>
-   <div class="slider" style="background:#fff; margin-top:5px" id="id-slider">
+  
+   <div class="slider container" style="background:#fff; margin-top:5px;" id="id-slider">
     <ul class="slides">
       <li>
         <img src="images/image1.jpg"> <!-- random image -->
@@ -92,25 +93,13 @@
       </li>
     </ul>
   </div>
-<!-- ................   LEFT ASIDE  - REDES SOCIALES ........................-->
+<!-- ................   LEFT ASIDE  - NOTICIAS ........................-->
+<div class="divider container"></div>
 <div class="row container" style="background:#fff">
-  <div class="col l4 m4 s12">
-    <center>
-        <div class="cabecera-facebook text-center">Facebook</div>
-        <div class="fb-page" data-href="https://www.facebook.com/DSTecOnLine/?fref=ts" data-width="6000px" data-height="300px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DSTecOnLine/?fref=ts"><a href="https://www.facebook.com/DSTecOnLine/?fref=ts">DSTec</a></blockquote></div></div>
-    </center>
-    <center>
-        <div style="margin-top:10px" class="cabecera-twitter text-center">Twitter</div>
-        <a class="twitter-timeline" href="https://twitter.com/PabloSanjuanM" data-widget-id="605896592067936256">Tweets por el @PabloSanjuanM.</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-    </center>
-  </div>
-<!-- ................   RIGHT ASIDE  - NOTICIAS ........................-->  
+<div class="largo-fijo col l8 m8 s12">
 <center>
   <h1 class="titulo1">Noticias</h1>
 </center>
-<div class="largo-fijo col l8 m8 s12">
   <div class="card hoverable">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="images/image3.jpg">
@@ -152,8 +141,21 @@
     </div>
   </div>
 </div>
+<!-- ................   RIGHT ASIDE  - REDES SOCIALES ........................-->  
+  <div class="col l4 m4 s12">
+    <center>
+        <div class="cabecera-facebook text-center">Facebook</div>
+        <div class="fb-page" data-href="https://www.facebook.com/DSTecOnLine/?fref=ts" data-width="6000px" data-height="300px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DSTecOnLine/?fref=ts"><a href="https://www.facebook.com/DSTecOnLine/?fref=ts">DSTec</a></blockquote></div></div>
+    </center>
+    <center>
+        <div style="margin-top:10px" class="cabecera-twitter text-center">Twitter</div>
+        <a class="twitter-timeline" href="https://twitter.com/PabloSanjuanM" data-widget-id="605896592067936256">Tweets por el @PabloSanjuanM.</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </center>
+  </div>
 </div>
-<!-- ................   PATROCINADORES   ........................-->
+<div class="divider container"></div>
+<!-- ................   PATROCINADORES   ........................--> 
  <ul class="row container" style="background:#fff" id="vinculos">
       <li class="col s6 m4 l1">1</li>
       <li class="col s6 m4 l1">2</li>
@@ -174,22 +176,20 @@
   <div class="container">
     <div class="row">
       <div class="col l6 m6 s12">
-        <h5 class="titulo-informativo">Informacion De La Fundacion</h5>
+          <div id="map_canvas" style="width:auto; height:250px; margin-top:20px"></div>
+      </div>
+      <div class="col l3 m3 s12" style="margin-top:20px;">
+        <h5 class="titulo-informativo">Contacto</h5>
           <h3 class="contenido-informativo"><i class="tiny material-icons">contact_phone</i> +57 (2) 8332211</h3>
           <h3 class="contenido-informativo"><i class="tiny material-icons">phonelink_ring</i> 321 646 8106</h3>
           <h3 class="contenido-informativo"><i class="tiny material-icons">comment</i> pablosanjuanm@gmail.com</h3>
           <h3 class="contenido-informativo"><i class="tiny material-icons">person_pin</i> Calle 30 N # 4-50</h3>
           <h3 class="contenido-informativo"><i class="tiny material-icons">location_on</i> Popayan - Cauca</h3>
       </div>
-      <div class="col l6 m6 s12">
-        <h5 class="titulo-informativo">Contactanos</h5>
-          <div id="map_canvas" style="width:auto; height:200px"></div>
-          <ul class="redes_sociales">
-            <li><a class="" href=""><img src="images/facebook.png"></a></li>
-            <li><a class="" href=""><img src="images/twitter.png"></a></li>
-            <li><a class="" href=""><img src="images/youtube.png"></a></li>
-            <li><a class="" href=""><img src="images/g+.png"></a></li>
-          </ul>
+      <div class="col l3 m3 s12" style="margin-top:20px;">
+        <h5 class="titulo-informativo">Redes Sociales</h5>
+          <h3 class="contenido-informativo">Facebook</h3>
+          <h3 class="contenido-informativo">Twitter</h3>
       </div>
   </div>
 </footer>
