@@ -206,5 +206,10 @@ footer {
 }
 
 .centrartext{
-	text-align: justify;
+	text-align: justify !important;
+    text-justify: inter-word;
+}
+
+.integrantes{
+	list-style-type: circle;
 }
