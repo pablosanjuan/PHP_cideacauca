@@ -184,13 +184,13 @@ footer {
 .contenido2{
 	font-family: normal-text;
 	color:#000;
-	font-size: 10px;
+	font-size: 25px;
 }
 
 .contenido3{
 	font-family: normal-text;
 	color:#000;
-	font-size: 16px;
+	font-size: 18px;
 }
 .be-white{
 	background: #fff;
@@ -201,7 +201,7 @@ footer {
 }
 
 .degradado{
-	background: #2BBBAD;
+	background: #2BBBAD !important;
 }
 
 .redes_sociales{
