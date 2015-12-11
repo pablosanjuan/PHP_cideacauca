@@ -160,7 +160,7 @@ footer {
 .contenido1{
 	font-family: normal-text;
 	color:#000;
-	font-size: 20px;
+	font-size: 35px;
 }
 
 .contenido2{
@@ -207,9 +207,20 @@ footer {
 
 .centrartext{
 	text-align: justify !important;
-    text-justify: inter-word;
+    font-family: normal-text;
 }
 
 .integrantes{
 	list-style-type: circle;
+}
+
+.titulonosotros{
+	text-align: center; !important;
+    font-family: normal-text;
+}
+.titulosub{
+	font-family: tittle-text-regular;
+	color:#16a085;
+	font-size: 38px;
+	text-decoration: underline;
 }
