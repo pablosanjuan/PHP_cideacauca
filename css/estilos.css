@@ -73,6 +73,9 @@ footer {
 	background:#262626;
 	color: #fff;
 }
+.be-light-grey{
+	background:#F0F0F0;
+}
 
 .normal-txt{
 	color: #fff;
@@ -170,9 +173,9 @@ footer {
 	font-size: 18px;
 }
 
-.titulo1-blanco{
+.titulo1-negro{
 	font-family: tittle-text-regular;
-	color:#fff;
+	color:#000;
 	font-size: 38px;
 }
 
@@ -252,6 +255,12 @@ footer {
 	font-family: tittle-text-regular;
 	color:#16a085;
 	font-size: 38px;
+	text-decoration: underline;
+}
+.titulosub2{
+	font-family: tittle-text-regular;
+	color:#16a085;
+	font-size: 23px;
 	text-decoration: underline;
 }
 
