@@ -48,10 +48,12 @@
       <br>
       <form action="submit">
         <div class="input-field">
+            <i class="material-icons prefix">format_color_text</i>
             <input id="first_name" type="text" class="materialize-textarea">
             <label class="" for="first_name">Titulo</label>
         </div>
         <div class="input-field">
+            <i class="material-icons prefix">mode_edit</i>
             <textarea id="first_name" type="text" class="materialize-textarea"></textarea>
             <label class="" for="first_name">Descripción</label>
         </div>
@@ -75,9 +77,8 @@
           </div>
         </div>
         <br>
-        <button class="btn right-align hoverable waves-effect waves-teal" type="submit">Agregar
-          <i class="material-icons left">add</i>
-        </button>
+        <a class="waves-effect waves-light right btn"><i class="material-icons left">add</i>Agregar</a>
+        <br>
     </form>  
     <br>
     <div class="divider col s12 m12 l12"></div>

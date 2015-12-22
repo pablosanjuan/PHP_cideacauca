@@ -39,8 +39,37 @@
       <a href="admin_user.html" class="collection-item titulo4">Password</a>
     </div>
 <!-- ................   CONTENIDO DERECHA   ........................-->    
-    <div class="col s12 m12 l9" style="margin-top:10px">
-      <h5 class="contenido3 center-align">User</h5>
+<div class="col s12 m12 l9" style="margin-top:10px">
+  <h5 class="contenido2 center-align">Panel de Administrador para modificar los datos de Contacto que aparecen en todas las pestañas de usuario</h5>
+  <br>
+    <form >
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">contact_phone</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Telefono Fijo</label>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">phonelink_ring</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">Celular</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">comment</i>
+          <input id="email" type="email" class="validate">
+          <label for="email" data-error="correo@ejemplo.com" data-success="Correo Correcto">Correo</label>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <i class="material-icons prefix">person_pin</i>
+          <input id="icon_telephone" type="text" class="validate">
+          <label for="icon_telephone">Direccion</label>
+        </div>
+      </div>
+      <br>
+        <a class="waves-effect waves-light right btn"><i class="material-icons left">save</i>Guradar</a>
+    </form>
 </div>
 <!-- ................   LIBRERIAS  JQUERY   ........................-->
     <script type="text/javascript" src="js/jquery.js"></script>

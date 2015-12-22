@@ -39,10 +39,50 @@
       <a href="admin_user.html" class="collection-item titulo4">Password</a>
     </div>
 <!-- ................   CONTENIDO DERECHA   ........................-->    
-  <div class="col s12 m12 l9" style="margin-top:10px">
-    <h5 class="contenido2 center-align">Panel de Administrador para modificar los datos de Contacto que aparecen en todas las pestañas de usuario</h5>
-    <br>
-  </div>
+    <div class="col s12 m12 l9" style="margin-top:10px">
+      <h5 class="contenido2 center-align">Panel de Administrador para modificar su información Institucional. Mostrada la Pestaña de usuario "Nosotros"</h5>
+      <br>
+      <form action="submit">
+        <h5 class="titulosub2">Quienes Somos</h5>
+        <div class="input-field">
+            <textarea id="first_name" type="text" class="materialize-textarea"></textarea>
+            <label class="" for="first_name">Modificar Quienes Somos</label>
+        </div>
+        <h5 class="titulosub2">Misión</h5>
+        <br>
+        <div class="input-field">
+            <textarea id="first_name" type="text" class="materialize-textarea"></textarea>
+            <label class="" for="first_name">Modificar Misión</label>
+        </div>
+        <h5 class="titulosub2">Visión</h5>
+        <br>
+        <div class="input-field">
+            <textarea id="first_name" type="text" class="materialize-textarea"></textarea>
+            <label class="" for="first_name">Modificar Visión</label>
+        </div>
+        <h5 class="titulosub2">Funciones</h5>
+        <br>
+        <div class="input-field col s12 m12 l6 ">
+            <textarea id="first_name" type="text" class="materialize-textarea" values="Hola Mundo"></textarea>
+            <label class="" for="first_name">Modificar Funciones (Columna Izquierda)</label>
+        </div>
+        <div class="input-field col s12 m12 l6 ">
+            <textarea id="first_name" type="text" class="materialize-textarea"></textarea>
+            <label class="" for="first_name">Modificar Funciones (Columna Derecha)</label>
+        </div>
+        <h5 class="titulosub2">Integrantes</h5>
+        <br>
+        <div class="input-field col s12 m12 l6 ">
+            <textarea id="first_name" type="text" class="materialize-textarea"></textarea>
+            <label class="" for="first_name">Modificar Integrantes (Columna Izquierda)</label>
+        </div>
+        <div class="input-field col s12 m12 l6 ">
+            <textarea id="first_name" type="text" class="materialize-textarea"></textarea>
+            <label class="" for="first_name">Modificar Integrantes (Columna Derecha)</label>
+        </div>
+        <a class="waves-effect waves-light right btn"><i class="material-icons left">save</i>Guradar</a>
+      </form>
+    </div>
 <!-- ................   LIBRERIAS  JQUERY   ........................-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

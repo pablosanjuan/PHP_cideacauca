@@ -14,20 +14,20 @@
     <img width="25%" src="images/cidea.png">
     <h5 class="titulo1">Iniciar Sesion de Administracion</h5>  
     <div class="row valign-wrapper">
-      <form class="col s12 m4 l4 offset-m4 offset-l4">
+      <form class="col s12 m4 l4 offset-m4 offset-l4" method="POST" action="controllers/autenticar_user.php">
         <div class="row">
         <center>
           <div class="input-field">
             <i class="material-icons prefix">account_circle</i>
-            <input id="icon_prefix" type="text" class="validate">
+            <input name="username" id="icon_prefix" type="text" class="validate">
             <label for="icon_prefix">Usuario</label>
           </div>
           <div class="input-field">
             <i class="material-icons prefix">vpn_key</i>
-            <input id="icon_telephone" type="password" class="validate">
+            <input name="pass" id="icon_telephone" type="password" class="validate">
             <label for="icon_telephone">Password</label>
           </div>
-          <a class="waves-effect waves-light btn hoverable" href="administrador.html"><i class="material-icons left">lock_open</i>Iniciar Sesion</a>
+          <button class="waves-effect waves-light btn hoverable" type="submit"><i class="material-icons left">lock_open</i>Iniciar Sesion</button>
           </center>
         </div>
       </form>
