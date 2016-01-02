@@ -49,11 +49,11 @@ class UserDao {
      * for the real load-method which accepts the valueObject as a parameter. Returned
      * valueObject will be created using the createValueObject() method.
      */
-    function getObject(&$conn, $id) {
+    function getObject(&$conn, $idUser) {
 
           $valueObject = $this->createValueObject();
-          $valueObject->setId($id);
-          $this->load(&$conn, &$valueObject);
+          $valueObject->setIdUser($idUser);
+          $this->load($conn, $valueObject);
           return $valueObject;
     }
 
@@ -72,14 +72,14 @@ class UserDao {
      */
     function load(&$conn, &$valueObject) {
 
-          if (!$valueObject->getId()) {
+          if (!$valueObject->getIdUser()) {
                //print "Can not select without Primary-Key!";
                return false;
           }
 
-          $sql = "SELECT * FROM user WHERE (id = ".$valueObject->getId().") "; 
+          $sql = "SELECT * FROM user WHERE (idUser = ".$valueObject->getIdUser().") "; 
 
-          if ($this->singleQuery(&$conn, $sql, &$valueObject))
+          if ($this->singleQuery($conn, $sql, $valueObject))
                return true;
           else
                return false;
@@ -98,9 +98,9 @@ class UserDao {
     function loadAll(&$conn) {
 
 
-          $sql = "SELECT * FROM user ORDER BY id ASC ";
+          $sql = "SELECT * FROM user ORDER BY idUser ASC ";
 
-          $searchResults = $this->listQuery(&$conn, $sql);
+          $searchResults = $this->listQuery($conn, $sql);
 
           return $searchResults;
     }
@@ -122,10 +122,10 @@ class UserDao {
      */
     function create(&$conn, &$valueObject) {
 
-          $sql = "INSERT INTO user ( id, usuario, pass) VALUES (".$valueObject->getId().", ";
-          $sql = $sql."'".$valueObject->getUsuario()."', ";
+          $sql = "INSERT INTO user ( idUser, user, pass) VALUES (".$valueObject->getIdUser().", ";
+          $sql = $sql."'".$valueObject->getUser()."', ";
           $sql = $sql."'".$valueObject->getPass()."') ";
-          $result = $this->databaseUpdate(&$conn, $sql);
+          $result = $this->databaseUpdate($conn, $sql);
 
 
           return true;
@@ -145,10 +145,10 @@ class UserDao {
      */
     function save(&$conn, &$valueObject) {
 
-          $sql = "UPDATE user SET usuario = '".$valueObject->getUsuario()."', ";
+          $sql = "UPDATE user SET user = '".$valueObject->getUser()."', ";
           $sql = $sql."pass = '".$valueObject->getPass()."'";
-          $sql = $sql." WHERE (id = ".$valueObject->getId().") ";
-          $result = $this->databaseUpdate(&$conn, $sql);
+          $sql = $sql." WHERE (idUser = ".$valueObject->getIdUser().") ";
+          $result = $this->databaseUpdate($conn, $sql);
 
           if ($result != 1) {
                //print "PrimaryKey Error when updating DB!";
@@ -174,13 +174,13 @@ class UserDao {
     function delete(&$conn, &$valueObject) {
 
 
-          if (!$valueObject->getId()) {
+          if (!$valueObject->getIdUser()) {
                //print "Can not delete without Primary-Key!";
                return false;
           }
 
-          $sql = "DELETE FROM user WHERE (id = ".$valueObject->getId().") ";
-          $result = $this->databaseUpdate(&$conn, $sql);
+          $sql = "DELETE FROM user WHERE (idUser = ".$valueObject->getIdUser().") ";
+          $result = $this->databaseUpdate($conn, $sql);
 
           if ($result != 1) {
                //print "PrimaryKey Error when updating DB!";
@@ -204,7 +204,7 @@ class UserDao {
     function deleteAll(&$conn) {
 
           $sql = "DELETE FROM user";
-          $result = $this->databaseUpdate(&$conn, $sql);
+          $result = $this->databaseUpdate($conn, $sql);
 
           return true;
     }
@@ -250,14 +250,14 @@ class UserDao {
           $first = true;
           $sql = "SELECT * FROM user WHERE 1=1 ";
 
-          if ($valueObject->getId() != 0) {
+          if ($valueObject->getIdUser() != 0) {
               if ($first) { $first = false; }
-              $sql = $sql."AND id = ".$valueObject->getId()." ";
+              $sql = $sql."AND idUser = ".$valueObject->getIdUser()." ";
           }
 
-          if ($valueObject->getUsuario() != "") {
+          if ($valueObject->getUser() != "") {
               if ($first) { $first = false; }
-              $sql = $sql."AND usuario LIKE '".$valueObject->getUsuario()."%' ";
+              $sql = $sql."AND user LIKE '".$valueObject->getUser()."%' ";
           }
 
           if ($valueObject->getPass() != "") {
@@ -266,14 +266,14 @@ class UserDao {
           }
 
 
-          $sql = $sql."ORDER BY id ASC ";
+          $sql = $sql."ORDER BY idUser ASC ";
 
           // Prevent accidential full table results.
           // Use loadAll if all rows must be returned.
           if ($first)
                return array();
 
-          $searchResults = $this->listQuery(&$conn, $sql);
+          $searchResults = $this->listQuery($conn, $sql);
 
           return $searchResults;
     }
@@ -321,8 +321,8 @@ class UserDao {
 
           if ($row = $conn->nextRow($result)) {
 
-                   $valueObject->setId($row[0]); 
-                   $valueObject->setUsuario($row[1]); 
+                   $valueObject->setIdUser($row[0]); 
+                   $valueObject->setUser($row[1]); 
                    $valueObject->setPass($row[2]); 
           } else {
                //print " Object Not Found!";
@@ -348,8 +348,8 @@ class UserDao {
           while ($row = $conn->nextRow($result)) {
                $temp = $this->createValueObject();
 
-               $temp->setId($row[0]); 
-               $temp->setUsuario($row[1]); 
+               $temp->setIdUser($row[0]); 
+               $temp->setUser($row[1]); 
                $temp->setPass($row[2]); 
                array_push($searchResults, $temp);
           }

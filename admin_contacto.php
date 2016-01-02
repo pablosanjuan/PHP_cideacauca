@@ -21,23 +21,23 @@
 <!-- ................   NAV MOBILE   ........................-->
 <nav class="hide-on-large-only degradado">
   <ul id="slide-out" class="side-nav">
-    <li><a href="admin_institucional.html" class="collection-item titulo4">Institucional</a></li>
-    <li><a href="admin_documentos.html" class="collection-item titulo4">Documentos de Interes</a></li>
-    <li><a href="admin_experiencias.html" class="collection-item titulo4">Experiencias</a></li>
-    <li><a href="admin_contacto.html" class="collection-item titulo4">Contacto</a></li>
-    <li><a href="admin_user.html" class="collection-item titulo4">Password</a></li>
+    <li><a href="admin_institucional.php" class="collection-item titulo4">Institucional</a></li>
+    <li><a href="admin_documentos.php" class="collection-item titulo4">Documentos de Interes</a></li>
+    <li><a href="admin_experiencias.php" class="collection-item titulo4">Experiencias</a></li>
+    <li><a href="admin_contacto.php" class="collection-item titulo4">Contacto</a></li>
+    <li><a href="admin_user.php" class="collection-item titulo4">Password</a></li>
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">reorder</i></a>
 </nav>
 <!-- ................   COLLECTION IZQUIERDO   ........................-->
-  <div class="row container">
-    <div class="collection col s3 hide-on-med-and-down">
-      <a href="admin_institucional.html" class="collection-item titulo4">Institucional</a>
-      <a href="admin_documentos.html" class="collection-item titulo4">Documentos de Interes</a>
-      <a href="admin_experiencias.html" class="collection-item titulo4">Experiencias</a>
-      <a href="admin_contacto.html" class="collection-item titulo4">Contacto</a>
-      <a href="admin_user.html" class="collection-item titulo4">Password</a>
-    </div>
+<div class="row container">
+  <div class="collection col s3 hide-on-med-and-down">
+    <a href="admin_institucional.php" class="collection-item titulo4">Institucional</a>
+    <a href="admin_documentos.php" class="collection-item titulo4">Documentos de Interes</a>
+    <a href="admin_experiencias.php" class="collection-item titulo4">Experiencias</a>
+    <a href="admin_contacto.php" class="collection-item titulo4">Contacto</a>
+    <a href="admin_user.php" class="collection-item titulo4">Password</a>
+  </div>
 <!-- ................   CONTENIDO DERECHA   ........................-->    
 <div class="col s12 m12 l9" style="margin-top:10px">
   <h5 class="contenido2 center-align">Panel de Administrador para modificar los datos de Contacto que aparecen en todas las pestañas de usuario</h5>

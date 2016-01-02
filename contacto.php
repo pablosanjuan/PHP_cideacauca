@@ -38,25 +38,27 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 <!-- ................   NAVIGATION BAR   ........................-->
-  <nav id="barra-nav" class="" style="margin-bottom:10px;">
+  <nav id="barra-nav" class="navbar-fixed" style="margin-bottom:10px;">
     <div class="nav-wrapper be-black z-depth-4">
       <a href="index.html" class="hide-on-med-and-down brand-logo"><img src="images/cidea.png" width="50%"></a>
       <a href="index.html" class="hide-on-large-only brand-logo hidden"><img src="images/cidea_movil.png" width="50%"></a>
       <a href="index.hmtl" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down" id="opciones-nav">
-        <li><a class="animation-nav" href="index.html">Inicio</a></li>
-        <li><a class="animation-nav" href="nosotros.html">Nosotros</a></li>
-        <li><a class="animation-nav" href="documentos.html">Documentos</a></li>
-        <li><a class="animation-nav" href="experiencias.html">Experiencias</a></li>
-        <li><a class="animation-nav active-nav" href="contacto.html">Contacto</a></li>
+        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="index.php">Inicio</a></li>
+        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="nosotros.php">Nosotros</a></li>
+        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="documentos.php">Documentos</a></li>
+        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="experiencias.php">Experiencias</a></li>
+        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="redecam.php">Redecam</a></li>
+        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav  active-nav" href="contacto.php">Contacto</a></li>
       </ul>
       <!-- ................  MOBILE NAVIGATION BAR   ........................-->
       <ul class="side-nav" id="mobile-demo">
-        <li><a class="mobile-item-nav" href="index.html">Inicio</a></li>
-        <li><a class="mobile-item-nav" href="nosotros.html">Nosotros</a></li>
-        <li><a class="mobile-item-nav" href="documentos.html">Documentos</a></li>
-        <li><a class="mobile-item-nav" href="experiencias.html">Experiencias</a></li>
-        <li><a class="mobile-item-nav" href="contacto.html">Contacto</a></li>
+        <li><a class="mobile-item-nav" href="index.php">Inicio</a></li>
+        <li><a class="mobile-item-nav" href="nosotros.php">Nosotros</a></li>
+        <li><a class="mobile-item-nav" href="documentos.php">Documentos</a></li>
+        <li><a class="mobile-item-nav" href="experiencias.php">Experiencias</a></li>
+        <li><a class="mobile-item-nav" href="redecam.php">Redecam</a></li>
+        <li><a class="mobile-item-nav" href="contacto.php">Contacto</a></li>
       </ul>
     </div>
   </nav>

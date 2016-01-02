@@ -34,8 +34,8 @@ class User {
      * Persistent Instance variables. This data is directly 
      * mapped to the columns of database table.
      */
-    var $id;
-    var $usuario;
+    var $idUser;
+    var $user;
     var $pass;
 
 
@@ -51,9 +51,9 @@ class User {
 
     }
 
-    /* function User ($idIn) {
+    /* function User ($idUserIn) {
 
-          $this->id = $idIn;
+          $this->idUser = $idUserIn;
 
     } */
 
@@ -64,18 +64,18 @@ class User {
      * so these might require some manual additions.
      */
 
-    function getId() {
-          return $this->id;
+    function getIdUser() {
+          return $this->idUser;
     }
-    function setId($idIn) {
-          $this->id = $idIn;
+    function setIdUser($idUserIn) {
+          $this->idUser = $idUserIn;
     }
 
-    function getUsuario() {
-          return $this->usuario;
+    function getUser() {
+          return $this->user;
     }
-    function setUsuario($usuarioIn) {
-          $this->usuario = $usuarioIn;
+    function setUser($userIn) {
+          $this->user = $userIn;
     }
 
     function getPass() {
@@ -95,11 +95,11 @@ class User {
      * individual set-methods.
      */
 
-    function setAll($idIn,
-          $usuarioIn,
+    function setAll($idUserIn,
+          $userIn,
           $passIn) {
-          $this->id = $idIn;
-          $this->usuario = $usuarioIn;
+          $this->idUser = $idUserIn;
+          $this->user = $userIn;
           $this->pass = $passIn;
     }
 
@@ -113,10 +113,10 @@ class User {
      */
     function hasEqualMapping($valueObject) {
 
-          if ($valueObject->getId() != $this->id) {
+          if ($valueObject->getIdUser() != $this->idUser) {
                     return(false);
           }
-          if ($valueObject->getUsuario() != $this->usuario) {
+          if ($valueObject->getUser() != $this->user) {
                     return(false);
           }
           if ($valueObject->getPass() != $this->pass) {
@@ -137,8 +137,8 @@ class User {
         $out = $this->getDaogenVersion();
         $out = $out."\nclass User, mapping to table user\n";
         $out = $out."Persistent attributes: \n"; 
-        $out = $out."id = ".$this->id."\n"; 
-        $out = $out."usuario = ".$this->usuario."\n"; 
+        $out = $out."idUser = ".$this->idUser."\n"; 
+        $out = $out."user = ".$this->user."\n"; 
         $out = $out."pass = ".$this->pass."\n"; 
         return $out;
     }
@@ -150,15 +150,7 @@ class User {
      * is defined in java.lang.Object. Here, the retuned cloned object
      * will also have all its attributes cloned.
      */
-    function clone() {
-        $cloned = new User();
 
-        $cloned->setId($this->id); 
-        $cloned->setUsuario($this->usuario); 
-        $cloned->setPass($this->pass); 
-
-        return $cloned;
-    }
 
 
 

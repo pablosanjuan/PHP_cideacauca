@@ -2,14 +2,14 @@
 	include_once("../models/Datasource.php");
 	include_once("../models/UserDao.php");
 	include_once("../models/User.php");
-	include_once("../models/variables.php");
+	include_once("../models/Variables.php");
 	$conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);	
-	$usrDao=new UserDao();
+	$adao=new UserDao();
 	$username=$_POST["username"];
 	$password=$_POST["pass"];
 	$abusqueda=new User();
-	$abusqueda->setUsuario($username);
-	$list=$usrDao->searchMatching($conn,$abusqueda);
+	$abusqueda->setUser($username);
+	$list=$adao->searchMatching($conn,$abusqueda);
 	if(count($list)==0)
 	{
 		?>
@@ -26,7 +26,7 @@
 		{
 			?>
 			<script type="text/javascript">
-				alert("Contrasena incorrecta");
+				alert("Contrase\u00F1a incorrecta");
 			</script>
 			<Meta http-equiv="refresh" content="0,url=../sesion.php">
 			<?php
@@ -34,11 +34,11 @@
 		else
 		{
 			?>
-				<script type="text/javascript">
-					alert("Autenticacion exitosa");
-				</script>
-				<Meta http-equiv="refresh" content="0,url=../administrador.php">
-				<?php
+			<script type="text/javascript">
+				alert("Autenticaci\u00F3n exitosa");
+			</script>
+			<Meta http-equiv="refresh" content="0,url=../administrador.php">
+			<?php
 		}
 	}
 ?>
