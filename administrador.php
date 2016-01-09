@@ -14,8 +14,12 @@
     <img width="20%" src="images/cidea.png">
     <h5 class="titulo1">PANEL DE ADMINISTRACION</h5>
   </div>
+<!-- ................   CERRAR SESION  ........................-->
+  <div class="container right-align col s12 m12 l12 row">
+    <a href="" class="cerrar right"><i class="material-icons left">close</i>Cerrar Sesion</a>
+  </div>
 <!-- ................   ESPACIO AZUL   ........................-->
-  <div class="degradado center-align ">
+  <div class="degradado center-align col s12 m12 l12">
     <h5 class="titulo2-blanco">Cidea Cauca</h5>
   </div>
 <!-- ................   NAV MOBILE   ........................-->
