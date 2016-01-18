@@ -50,24 +50,24 @@
     <br>
       <h5 class="titulo2 center-align">Documento Nuevo</h5>
       <br>
-      <form action="submit">
+      <form action="controllers/crear_documento.php" method="POST">
         <div class="input-field">
             <i class="material-icons prefix">format_color_text</i>
-            <input id="first_name" type="text" class="materialize-textarea">
+            <input id="first_name" name="titulo" type="text" class="materialize-textarea">
             <label class="" for="first_name">Titulo</label>
         </div>
         <div class="input-field">
             <i class="material-icons prefix">mode_edit</i>
-            <textarea id="first_name" type="text" class="materialize-textarea"></textarea>
+            <textarea id="first_name" name="descripcion" type="text" class="materialize-textarea"></textarea>
             <label class="" for="first_name">Descripción</label>
         </div>
         <h5 class="titulo4">Agregar en:</h5>
         <p>
-          <input name="group1" type="radio" id="test1" />
+          <input name="group" type="radio" id="test1" />
           <label for="test1">Normatividad</label>
         </p>
         <p>
-          <input name="group1" type="radio" id="test2" />
+          <input name="group"  type="radio" id="test2" />
           <label for="test2">Otros Documentos de Interes</label>
         </p>
         <br>
@@ -77,11 +77,11 @@
             <input type="file">
           </div>
           <div class="file-path-wrapper">
-            <input class="file-path validate" type="text">
+            <input class="file-path validate" name="ruta" type="text">
           </div>
         </div>
         <br>
-        <a class="waves-effect waves-light right btn"><i class="material-icons left">add</i>Agregar</a>
+        <button type="submit" class="waves-effect waves-light right btn"><i class="material-icons left">save</i>Guradar</button>
         <br>
     </form>  
     <br>

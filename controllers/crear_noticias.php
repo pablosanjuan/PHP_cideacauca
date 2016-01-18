@@ -17,7 +17,7 @@
 	if($ndao->create($conn,$noticia))
 	{
 		?>
-		<meta http-equiv="REFRESH" content="0,url=../Interfaces/admon.php">
+		<meta http-equiv="REFRESH" content="0,url=../admin_noticias.php">
 		<script type="text/javascript">
 			alert("Noticia creada");
 		</script>
@@ -26,7 +26,7 @@
 	else
 	{
 		?>
-		<meta http-equiv="REFRESH" content="0,url=../Interfaces/admonNoticias.php">
+		<meta http-equiv="REFRESH" content="0,url=../admin_noticias.php">
 		<script type="text/javascript">
 			alert("Error creando la noticia");
 		</script>
