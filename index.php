@@ -132,47 +132,35 @@
     <center>
       <h1 class="titulo1">Noticias</h1>
     </center>
+<?php
+  include_once("models/Datasource.php");
+  include_once("models/NoticiasDao.php");
+  include_once("models/Noticias.php");
+  include_once("models/Variables.php");
+  $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+  $ndao=new NoticiasDao();
+  $noticias=$ndao->loadAll($conn);
+      for($i=0;$i<count($noticias);$i++)
+      {
+        ?>
     <div class="card hoverable">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="images/image3.jpg">
       </div>
       <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Titulo Noticia<i class="material-icons right">more_vert</i></span>
-        <p><a href="https://www.facebook.com/">Visitar Link</a></p>
+        <span class="card-title activator grey-text text-darken-4"><?php echo($noticias[$i]->getTitulo()) ?><i class="material-icons right">more_vert</i></span>
+        <p><a href="<?php echo($noticias[$i]->getEnlace()) ?>">Visitar Link</a></p>
       </div>
       <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Titulo Noticia<i class="material-icons right">close</i></span>
+        <span class="card-title grey-text text-darken-4"><?php echo($noticias[$i]->getTitulo()) ?><i class="material-icons right">close</i></span>
         <small>Publicado: 1-dic-2015</small>
-        <p>Esta es la informacion de la noticia que se quiere publicar</p>
+        <p><?php echo($noticias[$i]->getDescripcion()) ?></p>
       </div>
     </div>
-    <div class="card hoverable">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="images/image2.jpg">
-      </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-        <p><a href="#">This is a link</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-      </div>
-    </div>
-    <div class="card hoverable">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="images/image1.jpg">
-      </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-        <p><a href="#">This is a link</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-      </div>
-    </div>
-  </div>
+        <?php
+      }
+    ?>
+</div>
 <!-- ................   RIGHT ASIDE  - REDES SOCIALES ........................-->  
   <div class="col l4 m4 s12">
     <center><div class="cabecera-facebook text-center">banner RedeCam</div></center>
@@ -196,6 +184,7 @@
     $urlnosotros=$videosdao->getObject($conn,2);
   ?>
   <h6><?php echo($urlinicio->getUrl()); ?></h6>
+  <h6><?php echo($urlnosotros->getUrl()); ?></h6>
   <div class="video-container">
     <iframe width="400" height="280" src="<?php echo($urlinicio->getUrl()); ?>" frameborder="1" allowfullscreen></iframe>
   </div>

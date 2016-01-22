@@ -78,24 +78,32 @@
   </ul>
 </div>
   <!--...........CONTENIDO............-->
+  <?php        
+    include_once("models/Datasource.php");
+    include_once("models/InstitucionalDao.php");
+    include_once("models/Institucional.php");
+    include_once("models/Variables.php");
+    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+    $instsdao=new  InstitucionalDao();
+    $somos=$instsdao->getObject($conn,1);
+    $mision=$instsdao->getObject($conn,2);
+    $vision=$instsdao->getObject($conn,3);
+  ?>
   <div class="row container">
     </br></br>
     <h1 class="contenido1  col s12 m12 l12 titulonosotros">CIDEA Cauca : Comité Técnico Interinstitucional de Educación  Ambiental del Departamento del Cauca</h1>
     <h1 class="titulosub col s12 m12 l12 centrartext">Quienes Somos</h1>
-     <p class="centrartext">Conformado desde el año 2004 y oficializado mediante ordenanza No 102 del 31 de Juilio de 2014 por la Asamblea Departamental del Cauca , el cominte técnico interinstitucional de educación ambiental del Cauca  se conforma como  la maxima instancia de articulación y dirección de la Educación ambiental  del Departamento, cuyo objeto es el direccionamiento de Politicas, Planes, Programas y proyectos de educación ambiental, asi como  orientar a instituciones públicas y privadas sobre el cumplimiento, alcance y aplicación de las disposiciones legales vigentes que en materia de Educación Ambiental expida tanto el Ministerio de Educación Nacional como el Ministerio de Ambeinte y Desarrollo sostenible, o los que hagan sus veces. </p>
+     <p class="centrartext"><?php echo($somos->getContenido());?></p>
 
     <h1 class="titulosub col s12 m12 l12 centrartext">Mision</h1>
-     <p class="centrartext">Asesorar, orientar y acompañar la institucionalización de la Educación Ambiental en los sectores gubernamentales, civiles y/o comunitarios a nivel formaL Y  no formal. </p>
+     <p class="centrartext"><?php echo($mision->getContenido());?></p>
     
     <h1 class="titulosub col s12 m12 l12 centrartext">Vision</h1>
-     <p class="centrartext">Posicionar el comité técnico interinstitucional de educación ambiental del Cauca, como espacio intersectorial y de participación comunitaria  que dinamiza  la educación ambiental como estrategia para la  transformación  de la cultura ambiental.</p>
-
-     <h1 class="titulosub col s12 m12 l12 centrartext">Funciones</h1>
-  
+     <p class="centrartext"><?php echo($vision->getContenido());?></p>
   </div>
-  
+
   <div class="row container">
-    
+    <h1 class="titulosub col s12 m12 l12 centrartext">Funciones</h1>
     <ul class="col s12 m6 l6">
       <li><p class="centrartext">1. Aunar esfuerzos conceptuales, metodológicos, técnicos, financieros y de proyección, entre las diferentes instituciones con competencia y responsabilidad en el área de la Educación Ambiental, con el fin de propiciar estrategias, acciones y espacios para la formación de seres críticos, reflexivos y comprometidos con el desarrollo ambiental sostenible de la región.</p></li>
       <li><p class="centrartext">2. Asesorar, acompañar y  apoyar la construcción del  Plan de Educación Ambiental con enfoque diferencial para el Departamento,  así como direccionar  y hacer seguimiento a su implementación. </p></li>
