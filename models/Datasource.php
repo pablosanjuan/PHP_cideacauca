@@ -119,7 +119,7 @@ class Datasource {
 
                         print "Unrecowerable error has occurred. All data will be logged.";
                         print "Please contact System Administrator for help! \n";
-                        print "<!-- ".$message." -->\n";
+                        print " ".$message." \n";
                         exit;
 
                 } else {

@@ -49,7 +49,7 @@ class NoticiasDao {
      * for the real load-method which accepts the valueObject as a parameter. Returned
      * valueObject will be created using the createValueObject() method.
      */
-    function getObject(&$conn, $idNoticia) {
+    function getObject($conn, $idNoticia) {
 
           $valueObject = $this->createValueObject();
           $valueObject->setIdNoticia($idNoticia);
@@ -70,7 +70,7 @@ class NoticiasDao {
      * @param valueObject  This parameter contains the class instance to be loaded.
      *                     Primary-key field must be set for this to work properly.
      */
-    function load(&$conn, &$valueObject) {
+    function load($conn, $valueObject) {
 
           if (!$valueObject->getIdNoticia()) {
                //print "Can not select without Primary-Key!";
@@ -95,7 +95,7 @@ class NoticiasDao {
      *
      * @param conn         This method requires working database connection.
      */
-    function loadAll(&$conn) {
+    function loadAll($conn) {
 
 
           $sql = "SELECT * FROM noticias ORDER BY idNoticia ASC ";
@@ -120,10 +120,10 @@ class NoticiasDao {
      *                     If automatic surrogate-keys are not used the Primary-key 
      *                     field must be set for this to work properly.
      */
-    function create(&$conn, &$valueObject) {
+    function create($conn, $valueObject) {
 
-          $sql = "INSERT INTO noticias ( idNoticia, titulo, enlace, ";
-          $sql = $sql."ruta, descripcion) VALUES (".$valueObject->getIdNoticia().", ";
+          $sql = "INSERT INTO noticias ( titulo, enlace, ";
+          $sql = $sql."ruta, descripcion) VALUES (";
           $sql = $sql."'".$valueObject->getTitulo()."', ";
           $sql = $sql."'".$valueObject->getEnlace()."', ";
           $sql = $sql."'".$valueObject->getRuta()."', ";
@@ -146,7 +146,7 @@ class NoticiasDao {
      * @param valueObject  This parameter contains the class instance to be saved.
      *                     Primary-key field must be set for this to work properly.
      */
-    function save(&$conn, &$valueObject) {
+    function save($conn, $valueObject) {
 
           $sql = "UPDATE noticias SET titulo = '".$valueObject->getTitulo()."', ";
           $sql = $sql."enlace = '".$valueObject->getEnlace()."', ";
@@ -176,7 +176,7 @@ class NoticiasDao {
      * @param valueObject  This parameter contains the class instance to be deleted.
      *                     Primary-key field must be set for this to work properly.
      */
-    function delete(&$conn, &$valueObject) {
+    function delete($conn, $valueObject) {
 
 
           if (!$valueObject->getIdNoticia()) {
@@ -206,7 +206,7 @@ class NoticiasDao {
      *
      * @param conn         This method requires working database connection.
      */
-    function deleteAll(&$conn) {
+    function deleteAll($conn) {
 
           $sql = "DELETE FROM noticias";
           $result = $this->databaseUpdate($conn, $sql);
@@ -223,7 +223,7 @@ class NoticiasDao {
      *
      * @param conn         This method requires working database connection.
      */
-    function countAll(&$conn) {
+    function countAll($conn) {
 
           $sql = "SELECT count(*) FROM noticias";
           $allRows = 0;
@@ -250,7 +250,7 @@ class NoticiasDao {
      * @param valueObject  This parameter contains the class instance where search will be based.
      *                     Primary-key field should not be set.
      */
-    function searchMatching(&$conn, &$valueObject) {
+    function searchMatching($conn, $valueObject) {
 
           $first = true;
           $sql = "SELECT * FROM noticias WHERE 1=1 ";
@@ -312,7 +312,7 @@ class NoticiasDao {
      * @param conn         This method requires working database connection.
      * @param stmt         This parameter contains the SQL statement to be excuted.
      */
-    function databaseUpdate(&$conn, &$sql) {
+    function databaseUpdate($conn, $sql) {
 
           $result = $conn->execute($sql);
 
@@ -330,7 +330,7 @@ class NoticiasDao {
      * @param stmt         This parameter contains the SQL statement to be excuted.
      * @param valueObject  Class-instance where resulting data will be stored.
      */
-    function singleQuery(&$conn, &$sql, &$valueObject) {
+    function singleQuery($conn, $sql, $valueObject) {
 
           $result = $conn->execute($sql);
 
@@ -357,7 +357,7 @@ class NoticiasDao {
      * @param conn         This method requires working database connection.
      * @param stmt         This parameter contains the SQL statement to be excuted.
      */
-    function listQuery(&$conn, &$sql) {
+    function listQuery($conn, $sql) {
 
           $searchResults = array();
           $result = $conn->execute($sql);

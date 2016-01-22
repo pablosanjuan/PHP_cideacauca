@@ -9,6 +9,7 @@
 	$descripcion=$_POST["descripcion"];
 	$tipo=$_POST["group"];
 	$ruta=$_POST["ruta"];
+	
 	$documento=new Documentos();
 	$documento->setTitulo($titulo);
 	$documento->setDescripcion($descripcion);

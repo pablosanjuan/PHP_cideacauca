@@ -63,11 +63,11 @@
         </div>
         <h5 class="titulo4">Agregar en:</h5>
         <p>
-          <input name="group" type="radio" id="test1" />
+          <input name="group" type="radio" id="test1" value="0" />
           <label for="test1">Normatividad</label>
         </p>
         <p>
-          <input name="group"  type="radio" id="test2" />
+          <input name="group"  type="radio" id="test2" value="1" />
           <label for="test2">Otros Documentos de Interes</label>
         </p>
         <br>

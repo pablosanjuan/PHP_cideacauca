@@ -10,7 +10,9 @@
 	$cambios=false;
 	if(strlen($_POST["urlinicio"])!=0)
 	{
-		$urlinicio->setUrl($_POST["urlinicio"]);
+		$urlinicioString=$_POST["urlinicio"];
+		$urlinicioString=str_replace("watch?v=", "embed/", $urlinicioString);
+		$urlinicio->setUrl($urlinicioString);
 		$cambios=true;
 	}
 	if(strlen($_POST["urlnosotros"])!=0)
