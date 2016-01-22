@@ -79,29 +79,29 @@
 </div>
 <!-- ................   FORM CONTACTO   ........................-->
   <div class="row container">
-    <form class="col s12 m6 l6">
+    <form class="col s12 m6 l6" method="POST" action="../controllers/contacto.php">
     <h1 class="titulo1">Contactanos</h1>
     <h3 class="contenido3"> Para Cidea es importante contar con su opinion, contactanos por medio de correo electronico o buscanos en nuestras redes sociales.</h3>
       <div class="row">
         <div class="input-field">
           <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate">
+          <input id="icon_prefix" name="nombre" type="text" class="validate">
           <label for="icon_prefix">Nombre Completo</label>
         </div>
         <div class="input-field">
           <i class="material-icons prefix">phone</i>
-          <input id="icon_telephone" id="tel" type="tel" class="validate">
+          <input id="icon_telephone" id="tel" name="numcel" type="tel" class="validate">
           <label for="icon_telephone">Telefono - Celular</label>
         </div>
         <div class="input-field">
           <i class="material-icons prefix">email</i>
-          <input id="email" type="email" class="validate">
-          <label for="icon_telephone" data-error="correo@ejemplo.com" data-success="Correo Correcto">Correo Electronico</label>
+          <input id="email" name="email" type="email" class="validate">
+          <label for="icon_telephone" data-error="ejemplo@cideacauca.com" data-success="Correo Correcto">Correo Electronico</label>
         </div>
       </div>
       <div class="input-field">
           <i class="material-icons prefix">mode_edit</i>
-          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+          <textarea id="icon_prefix2" name="mensaje" class="materialize-textarea"></textarea>
           <label for="icon_prefix2">Mensaje</label>
       </div>
       <button class="btn hoverable waves-effect waves-teal" type="submit">Enviar
