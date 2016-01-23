@@ -27,7 +27,7 @@
     <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
     </head>
 
-<body onload="initialize(), Materialize.showStaggeredList('#opciones-nav')">
+<body onload="initialize(), Materialize.showStaggeredList('#opciones-nav'), Materialize.fadeInImage('#fade-inicial')">
 <!-- ................   INICIALIZACION DE FACEBOOK   ........................-->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -38,7 +38,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 <!-- ................   NAVIGATION BAR   ........................-->
-  <nav id="barra-nav" class="navbar-fixed" style="margin-bottom:10px;">
+  <nav id="barra-nav" class="navbar-fixed" style="margin-bottom:5px;">
     <div class="nav-wrapper be-black z-depth-4">
       <a href="index.html" class="hide-on-med-and-down brand-logo"><img src="images/cidea.png" width="50%"></a>
       <a href="index.html" class="hide-on-large-only brand-logo hidden"><img src="images/cidea_movil.png" width="50%"></a>
@@ -77,6 +77,22 @@
     <li><a class="btn-floating red accent-3 tooltipped" data-position="left" data-delay="10" data-tooltip="Contacto" alt="Contacto" href="contacto.php"><i class="material-icons">contact_phone</i></a></li>
   </ul>
 </div>
+  <!--...........VIDEO PRESENTACION............-->
+<div class="row">
+  <?php        
+    include_once("models/Datasource.php");
+    include_once("models/VideosDao.php");
+    include_once("models/Videos.php");
+    include_once("models/Variables.php");
+    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+    $videosdao=new VideosDao();
+    $urlinicio=$videosdao->getObject($conn,1);
+    $urlnosotros=$videosdao->getObject($conn,2);
+  ?>
+  <div class="video-container col l12 row offset-s6 video">
+    <iframe id="player" class="youtube-player" src="<?php echo($urlnosotros->getUrl()); ?>" frameborder="1" allowfullscreen></iframe>
+  </div>
+</div>
   <!--...........CONTENIDO............-->
   <?php        
     include_once("models/Datasource.php");
@@ -90,20 +106,32 @@
     $vision=$instsdao->getObject($conn,3);
   ?>
   <div class="row container">
-    </br></br>
-    <h1 class="contenido1  col s12 m12 l12 titulonosotros">CIDEA Cauca : Comité Técnico Interinstitucional de Educación  Ambiental del Departamento del Cauca</h1>
-    <h1 class="titulosub col s12 m12 l12 centrartext">Quienes Somos</h1>
-     <p class="centrartext"><?php echo($somos->getContenido());?></p>
-
-    <h1 class="titulosub col s12 m12 l12 centrartext">Mision</h1>
-     <p class="centrartext"><?php echo($mision->getContenido());?></p>
-    
-    <h1 class="titulosub col s12 m12 l12 centrartext">Vision</h1>
-     <p class="centrartext"><?php echo($vision->getContenido());?></p>
+    <h1 class="contenido1 col s12 m12 l12 titulonosotros">CIDEA Cauca : Comité Técnico Interinstitucional de Educación  Ambiental del Departamento del Cauca</h1>
+  </div>
+  <h1 class="titulosub centrartext container col s12 m12 l12" id="fade-inicial" style="opacity:0;">Quienes Somos</h1>
+  <div class="row container valign-wrapper">
+    <img src="images/somos.jpg" class="col s12 m12 l5 hide-on-small-only responsive-img circle valign row" id="fade1" style="opacity:0;">
+    <div class="row col s12 m12 l7">
+      <p class="centrartext contenido4" style="opacity:0,5;" id="fade-inicial"><?php echo($somos->getContenido());?></p>
+    </div>
+  </div>
+  <h1 class="titulosub centrartext row container col s12 m12 l12" id="fade2-tit" style="opacity:0;">Mision</h1>
+  <div class="row container valign-wrapper">
+    <div class="row col s12 m12 l7">
+      <p class="centrartext"><?php echo($mision->getContenido());?></p>
+    </div>
+    <img src="images/mision.jpg" class="col s12 m12 l5 hide-on-small-only responsive-img circle valign" id="fade2" style="opacity:0;">
+  </div>
+  <h1 class="titulosub centrartext row container col s12 m12 l12" id="fade3-tit" style="opacity:0;">Vision</h1>
+  <div class="row container valign-wrapper">
+    <img src="images/vision.jpg" class="col s12 m12 l5 hide-on-small-only responsive-img circle valign" id="fade3" style="opacity:0;">
+    <div class="row col s12 m12 l7">
+      <p class="centrartext"><?php echo($vision->getContenido());?></p>
+    </div>
   </div>
 
   <div class="row container">
-    <h1 class="titulosub col s12 m12 l12 centrartext">Funciones</h1>
+    <h1 class="titulosub col s12 m12 l12 centrartext" id="fade-func" style="opacity:0;">Funciones</h1>
     <ul class="col s12 m6 l6">
       <li><p class="centrartext">1. Aunar esfuerzos conceptuales, metodológicos, técnicos, financieros y de proyección, entre las diferentes instituciones con competencia y responsabilidad en el área de la Educación Ambiental, con el fin de propiciar estrategias, acciones y espacios para la formación de seres críticos, reflexivos y comprometidos con el desarrollo ambiental sostenible de la región.</p></li>
       <li><p class="centrartext">2. Asesorar, acompañar y  apoyar la construcción del  Plan de Educación Ambiental con enfoque diferencial para el Departamento,  así como direccionar  y hacer seguimiento a su implementación. </p></li>
@@ -122,7 +150,7 @@
 
   <div class="row container">
     
-    <h1 class="titulosub col s12 m12 l12 centrartext">Integrantes</h1>
+    <h1 class="titulosub col s12 m12 l12 centrartext" id="fade-integ" style="opacity:0;">Integrantes</h1>
       <p class="centrartext">
         <ul class="col s12 m6 l6" >
           <li class="integrantes centrartext">Gobernador del Departamento o su delegado</li>
@@ -215,9 +243,29 @@
     <script type="text/javascript" src="js/funciones.js"></script>
     <script type="text/javascript">
     var options = [
-    {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' }
+    {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' },
+    {selector: '#fade1', offset: 1, callback: 'Materialize.fadeInImage("#fade1")' },
+    {selector: '#fade2', offset: 300, callback: 'Materialize.fadeInImage("#fade2")' },
+    {selector: '#fade2-tit', offset: 300, callback: 'Materialize.fadeInImage("#fade2-tit")' },
+    {selector: '#fade3', offset: 400, callback: 'Materialize.fadeInImage("#fade3")' },
+    {selector: '#fade3-tit', offset: 400, callback: 'Materialize.fadeInImage("#fade3-tit")' },
+    {selector: '#fade-func', offset: 300, callback: 'Materialize.fadeInImage("#fade-func")' },
+    {selector: '#fade-integ', offset: 200, callback: 'Materialize.fadeInImage("#fade-integ")' },
     ];
     Materialize.scrollFire(options);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+    function onPlayerReady(event) {
+        player.mute();
+        player.playVideo();
+    }
     </script>
  </body>
 </html>

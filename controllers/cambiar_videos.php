@@ -10,14 +10,16 @@
 	$cambios=false;
 	if(strlen($_POST["urlinicio"])!=0)
 	{
-		$urlinicioString=$_POST["urlinicio"];
+		$urlinicioString=$_POST["urlinicio"]."?wmode=opaque&autohide=1&autoplay=1&enablejsapi=1";
 		$urlinicioString=str_replace("watch?v=", "embed/", $urlinicioString);
 		$urlinicio->setUrl($urlinicioString);
 		$cambios=true;
 	}
 	if(strlen($_POST["urlnosotros"])!=0)
 	{
-		$urlnosotros->setUrl($_POST["urlnosotros"]);
+		$urlnosotrosString=$_POST["urlnosotros"]."?wmode=opaque&autohide=1&autoplay=1&enablejsapi=1";
+		$urlnosotrosString=str_replace("watch?v=", "embed/", $urlnosotrosString);
+		$urlnosotros->setUrl($urlnosotrosString);
 		$cambios=true;
 	}
 	if($cambios)

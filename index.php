@@ -126,23 +126,23 @@
     </div>
 </div>
 <!-- ................   LEFT ASIDE  - NOTICIAS ........................-->
-<div class="divider container"></div>
+<div class="divider container"></div><br>
 <div class="row container" style="background:#fff">
   <div class="largo-fijo col l8 m8 s12">
     <center>
       <h1 class="titulo1">Noticias</h1>
     </center>
-<?php
-  include_once("models/Datasource.php");
-  include_once("models/NoticiasDao.php");
-  include_once("models/Noticias.php");
-  include_once("models/Variables.php");
-  $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
-  $ndao=new NoticiasDao();
-  $noticias=$ndao->loadAll($conn);
-      for($i=0;$i<count($noticias);$i++)
-      {
-        ?>
+  <?php
+    include_once("models/Datasource.php");
+    include_once("models/NoticiasDao.php");
+    include_once("models/Noticias.php");
+    include_once("models/Variables.php");
+    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+    $ndao=new NoticiasDao();
+    $noticias=$ndao->loadAll($conn);
+        for($i=0;$i<count($noticias);$i++)
+        {
+    ?>
     <div class="card hoverable">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator" src="images/image3.jpg">
@@ -157,7 +157,7 @@
         <p><?php echo($noticias[$i]->getDescripcion()) ?></p>
       </div>
     </div>
-        <?php
+    <?php
       }
     ?>
 </div>
@@ -183,15 +183,13 @@
     $urlinicio=$videosdao->getObject($conn,1);
     $urlnosotros=$videosdao->getObject($conn,2);
   ?>
-  <h6><?php echo($urlinicio->getUrl()); ?></h6>
-  <h6><?php echo($urlnosotros->getUrl()); ?></h6>
   <div class="video-container">
     <iframe width="400" height="280" src="<?php echo($urlinicio->getUrl()); ?>" frameborder="1" allowfullscreen></iframe>
   </div>
   <br>
-<div class="divider"></div>
+  <div class="divider"></div>
   <br>
-  </div>
+</div>
 <!-- ................   PATROCINADORES   ........................--> 
  <ul class="row container" style="background:#fff" id="vinculos">
       <li class="col s6 m4 l1">1</li>

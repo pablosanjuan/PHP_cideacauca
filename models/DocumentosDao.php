@@ -122,8 +122,8 @@ class DocumentosDao {
      */
     function create($conn, $valueObject) {
 
-          $sql = "INSERT INTO documentos ( idDocumento, titulo, descripcion, ";
-          $sql = $sql."tipo, ruta) VALUES (".$valueObject->getIdDocumento().", ";
+          $sql = "INSERT INTO documentos (titulo, descripcion, ";
+          $sql = $sql."tipo, ruta) VALUES (";
           $sql = $sql."'".$valueObject->getTitulo()."', ";
           $sql = $sql."'".$valueObject->getDescripcion()."', ";
           $sql = $sql."'".$valueObject->getTipo()."', ";

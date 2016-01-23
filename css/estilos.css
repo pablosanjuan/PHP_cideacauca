@@ -202,6 +202,12 @@ footer {
 	color:#000;
 	font-size: 18px;
 }
+
+.contenido4{
+	font-family: normal-text;
+	color:#000;
+	font-size: 14px;
+}
 .be-white{
 	background: #fff;
 }
@@ -221,7 +227,7 @@ footer {
     padding: 0;
 }
 .largo-fijo{
-	height: 900px;
+	height: 800px;
 	overflow-y: auto;
 }
 
@@ -280,4 +286,8 @@ footer {
 
 .social{
 	background: #81F781;
+}
+
+.video{
+	height: 300px !important;
 }

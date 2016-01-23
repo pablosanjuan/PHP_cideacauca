@@ -83,8 +83,8 @@
     <img class="image" width="70%" src="images/Imagen5.png">
 </div>
 <!-- ................   PATROCINADORES   ........................-->
-<div class="divider container"></div>
-<ul class="row container" style="background:#fff" id="vinculos">
+<div class="divider row container"></div>
+ <ul class="row container" style="background:#fff" id="vinculos">
       <li class="col s6 m4 l1">1</li>
       <li class="col s6 m4 l1">2</li>
       <li class="col s6 m4 l1">3</li>
@@ -98,8 +98,7 @@
       <li class="col s6 m4 l1">11</li>
       <li class="col s6 m4 l1">12</li>
 </ul>
-<div class="divider container"></div>
- <!-- ................   FOOTER   ........................-->
+<div class="divider row container"></div>
 <!-- ................   FOOTER   ........................-->
 <footer class="be-grey">
   <div class="container">
