@@ -22,7 +22,6 @@
       <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/favicon/favicon32.png">
       <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/favicon/favicon64.png">
       <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/favicon/favicon128.png">
-      
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
     </head>
@@ -77,22 +76,6 @@
     <li><a class="btn-floating red accent-3 tooltipped" data-position="left" data-delay="10" data-tooltip="Contacto" alt="Contacto" href="contacto.php"><i class="material-icons">contact_phone</i></a></li>
   </ul>
 </div>
-  <!--...........VIDEO PRESENTACION............-->
-<div class="row">
-  <?php        
-    include_once("models/Datasource.php");
-    include_once("models/VideosDao.php");
-    include_once("models/Videos.php");
-    include_once("models/Variables.php");
-    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
-    $videosdao=new VideosDao();
-    $urlinicio=$videosdao->getObject($conn,1);
-    $urlnosotros=$videosdao->getObject($conn,2);
-  ?>
-  <div class="video-container col l12 row offset-s6 video">
-    <iframe id="player" class="youtube-player" src="<?php echo($urlnosotros->getUrl()); ?>" frameborder="1" allowfullscreen></iframe>
-  </div>
-</div>
   <!--...........CONTENIDO............-->
   <?php        
     include_once("models/Datasource.php");
@@ -129,7 +112,23 @@
       <p class="centrartext"><?php echo($vision->getContenido());?></p>
     </div>
   </div>
-
+  <!--...........VIDEO PRESENTACION............-->
+<div class="row">
+  <?php        
+    include_once("models/Datasource.php");
+    include_once("models/VideosDao.php");
+    include_once("models/Videos.php");
+    include_once("models/Variables.php");
+    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+    $videosdao=new VideosDao();
+    $urlinicio=$videosdao->getObject($conn,1);
+    $urlnosotros=$videosdao->getObject($conn,2);
+  ?>
+  <div class="video-container col l12 row offset-s6 video">
+    <iframe id="player" class="youtube-player" src="<?php echo($urlnosotros->getUrl()); ?>" frameborder="1" allowfullscreen></iframe>
+  </div>
+</div>
+<!--...........FUNCIONES............-->
   <div class="row container">
     <h1 class="titulosub col s12 m12 l12 centrartext" id="fade-func" style="opacity:0;">Funciones</h1>
     <ul class="col s12 m6 l6">
