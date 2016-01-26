@@ -113,7 +113,7 @@
     </div>
   </div>
   <!--...........VIDEO PRESENTACION............-->
-<div class="row">
+<div class="row container">
   <?php        
     include_once("models/Datasource.php");
     include_once("models/VideosDao.php");
