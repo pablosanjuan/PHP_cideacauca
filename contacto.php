@@ -79,7 +79,7 @@
 </div>
 <!-- ................   FORM CONTACTO   ........................-->
   <div class="row container">
-    <form class="col s12 m6 l6" method="POST" action="../controllers/contacto.php">
+    <form class="col s12 m6 l6" method="POST" action="controllers/contacto.php">
     <h1 class="titulo1">Contactanos</h1>
     <h3 class="contenido3"> Para Cidea es importante contar con su opinion, contactanos por medio de correo electronico o buscanos en nuestras redes sociales.</h3>
       <div class="row">

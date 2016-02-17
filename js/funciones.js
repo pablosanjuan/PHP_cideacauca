@@ -16,6 +16,10 @@ $('.slider').slider('prev');
     $('.barra-nav .row').pushpin({ top: $('.barra-nav').offset().top });
   });
 
+    $(document).ready(function() {
+      $('.modal-trigger').leanModal();
+    });
+
 function initialize() {
           var latlng = new google.maps.LatLng(2.4410316,-76.6047626);
           var settings = {

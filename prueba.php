@@ -3,8 +3,8 @@
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="../css/estilos.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
       <!--..........metas............-->
       <title>CIDEA Cauca</title>
       <meta property="og:title" content="CIDEA Cauca" />
@@ -26,11 +26,11 @@
     </head>
 
 <body>
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#funciona">que mas</a>
+<!-- Modal Trigger -->
+  <button data-target="#modal1" class="btn modal-trigger">hola</button>
 
   <!-- Modal Structure -->
-  <div id="funciona" class="modal">
+  <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>Modal Header</h4>
       <p>A bunch of text</p>
@@ -39,10 +39,9 @@
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
   </div>
-
 <!-- ................   LIBRERIAS  JQUERY   ........................-->
-    <script type="text/javascript" src="../js/jquery.js"></script>
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
-    <script type="text/javascript" src="../js/funciones.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
 </body>
 </html>
