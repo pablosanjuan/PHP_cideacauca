@@ -118,10 +118,10 @@
         <h1 class="valign titulo1 center-align">CIDEA Social</h1>
       </div>
       <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
-        <img width="90%" src="images/facebook.png">
+        <a href="http://www.facebook.com/CideaCauca" target="_blank"><img width="90%" src="images/facebook.png"></a>
       </div>
       <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
-       <img width="90%" src="images/twitter.png">
+       <a href="http://www.twitter.com/CideaCauca" target="_blank"><img width="90%" src="images/twitter.png"></a>
       </div>
     </div>
 </div>
@@ -163,12 +163,12 @@
 </div>
 <!-- ................   RIGHT ASIDE  - REDES SOCIALES ........................-->  
   <div class="col l4 m4 s12">
-    <center><div class="cabecera-facebook text-center">banner RedeCam</div></center>
-    <img src="images/cidea.png" alt="RedeCam" class="responsive-img">
+    <center><div class="cabecera-facebook text-center">RedeCam</div></center>
+    <img src="images/redecam/images/redecam.png" alt="RedeCam" class="responsive-img">
     <center>
       <div class="cabecera-facebook text-center">Facebook</div>
     </center>
-    <div class="fb-page" data-href="https://www.facebook.com/DSTecOnLine/?fref=ts" data-width="6000px" data-height="650px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DSTecOnLine/?fref=ts"><a href="https://www.facebook.com/DSTecOnLine/?fref=ts">DSTec</a></blockquote></div></div>
+    <div class="fb-page" data-href="https://www.facebook.com/CideaCauca/?fref=ts" data-width="6000px" data-height="650px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DSTecOnLine/?fref=ts"><a href="https://www.facebook.com/DSTecOnLine/?fref=ts">DSTec</a></blockquote></div></div>
   </div>
 </div>
 <!-- ..........VIDEO INSTITUCIONAL .......... -->
@@ -191,20 +191,23 @@
   <br>
 </div>
 <!-- ................   PATROCINADORES   ........................--> 
- <ul class="row container" style="background:#fff" id="vinculos">
-      <li class="col s6 m4 l1">1</li>
-      <li class="col s6 m4 l1">2</li>
-      <li class="col s6 m4 l1">3</li>
-      <li class="col s6 m4 l1">4</li>
-      <li class="col s6 m4 l1">5</li>
-      <li class="col s6 m4 l1">6</li>
-      <li class="col s6 m4 l1">7</li>
-      <li class="col s6 m4 l1">8</li>
-      <li class="col s6 m4 l1">9</li>
-      <li class="col s6 m4 l1">10</li>
-      <li class="col s6 m4 l1">11</li>
-      <li class="col s6 m4 l1">12</li>
+ <div class="row container valign-wrapper">
+ <ul class="center-align " style="background:#fff;" id="vinculos">
+      <li class="col s6 m3 l3 valign"><a href="https://www.minambiente.gov.co/" target="_blank"><img class="responsive-img" alt="Ministerio" style="width:90%;" src="images/patrocinadores/MinAmbiente.png"></a></li>
+      <li class="col s6 m3 l3 valign"><a href="http://www.mincultura.gov.co" target="_blank"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinCultura.png"></a></li>
+      <li class="col s6 m3 l3 valign"><a href="http://www.mintic.gov.co" target="_blank"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinTIC.png"></a></li>
+      <li class="col s6 m3 l3 valign"><a href="http://www.mineducacion.gov.co" target="_blank"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinEducacion.png"></a></li>
+  </ul>
+  </div>
+  <div class="row container valign-wrapper">
+  <ul class="center-align" style="background:#fff" id="vinculos2">
+      <li class="col s6 m3 l3 valign"><a href="http://crc.gov.co/" target="_blank"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/CRC.png"></a></li>
+      <li class="col s6 m3 l3 valign"><a href="http://www.cauca.gov.co/" target="_blank"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/GobCauca.png"></a></li>
+      <li class="col s6 m3 l3 valign"><a href="http://www.sedcauca.gov.co/" target="_blank"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/GobCauca.png"></a></li>
+      <li class="col s6 m3 l3 valign"><a href="http://www.colombiaaprende.edu.co" target="_blank"><img class="responsive-img" style="width:120%;" src="images/patrocinadores/ColAprende.png"></a></li>    
 </ul>
+</div>
+
 <!-- ................   FOOTER   ........................-->
 <footer class="be-grey">
   <div class="container">
@@ -234,8 +237,9 @@
       </div>
       <div class="col l3 m3 s12" style="margin-top:20px;">
         <h5 class="titulo-informativo">Redes Sociales</h5>
-          <h3 class="valign contenido-informativo"><span><img class="valign" width="9%" src="images/facebook.png"></span> Facebook</h3>
-          <h3 class="valign contenido-informativo"><span><img class="valign" width="9%" src="images/twitter.png"></span> Twitter</h3>
+          <a href="http://www.facebook.com/CideaCauca/"" target="_blank""><span><img class="valign" width="9%" src="images/facebook.png"></span> Facebook</a></br>
+          <a href="http://www.facebook.com/CideaCauca/"" target="_blank""><span><img class="valign" width="9%" src="images/twitter.png"></span> Facebook</a>
+          
       </div>
   </div>
 </footer>
@@ -251,7 +255,8 @@
     <script type="text/javascript" src="js/funciones.js"></script>
     <script type="text/javascript">
     var options = [
-    {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' }
+    {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' },
+    {selector: '#vinculos2', offset: 300, callback: 'Materialize.showStaggeredList("#vinculos2")' },
     ];
     Materialize.scrollFire(options);
     </script>

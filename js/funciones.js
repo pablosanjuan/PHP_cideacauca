@@ -21,7 +21,7 @@ $('.slider').slider('prev');
     });
 
 function initialize() {
-          var latlng = new google.maps.LatLng(2.4410316,-76.6047626);
+          var latlng = new google.maps.LatLng(2.4445416,-76.6058154);
           var settings = {
               zoom: 16,
               center: latlng,
@@ -32,10 +32,11 @@ function initialize() {
               mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       var map = new google.maps.Map(document.getElementById("map_canvas"), settings);
-      var companyPos = new google.maps.LatLng(2.440802, -76.604739);
+      var companyPos = new google.maps.LatLng(2.445446, -76.605862);
       var companyMarker = new google.maps.Marker({
           position: companyPos,
           map: map,
-          title:"CideaCauca"
-      });}
+          title:"CideaCauca - CRC"    
+      }
 
+      );}
