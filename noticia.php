@@ -78,60 +78,10 @@
     <li><a class="btn-floating red accent-3 tooltipped" data-position="left" data-delay="10" data-tooltip="Contacto" alt="Contacto" href="contacto.php"><i class="material-icons">contact_phone</i></a></li>
   </ul>
 </div>
-<!-- ................   SLIDER   ........................-->
-<div class="slider container" style="background:#fff; margin-top:5px;" id="id-slider">
-    <ul class="slides">
-      <li>
-        <img src="images/image1.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/image2.jpg"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/image3.jpg"> <!-- random image -->
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/image2.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-  </div>
-<!-- ..........social.......... -->
-<div class="be-light-grey">
-    <div class="container  row valign-wrapper">
-      <div class="col l8 m8 s12">
-        <h1 class="valign titulo1 center-align">CIDEA Social</h1>
-      </div>
-      <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
-        <a href="http://www.facebook.com/CideaCauca" target="_blank"><img width="90%" src="images/facebook.png"></a>
-      </div>
-      <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
-       <a href="http://www.twitter.com/CideaCauca" target="_blank"><img width="90%" src="images/twitter.png"></a>
-      </div>
-    </div>
-</div>
 <!-- ................   LEFT ASIDE  - NOTICIAS ........................-->
 <div class="divider container"></div><br>
 <div class="row container" style="background:#fff">
-  <div class="largo-fijo col l8 m8 s12">
-    <center>
-      <h1 class="titulo1">Noticias</h1>
-    </center>
+  <div class="col l8 m8 s12">
   <?php
     include_once("models/Datasource.php");
     include_once("models/NoticiasDao.php");
@@ -139,76 +89,50 @@
     include_once("models/Variables.php");
     $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
     $ndao=new NoticiasDao();
+    $idproducto=$_GET["id"];
     $noticias=$ndao->loadAll($conn);
-        for($i=0;$i<count($noticias);$i++)
-        {
     ?>
-    <div class="card hoverable">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="images/noticias/noticia2.jpg">
-      </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4"><?php echo($noticias[$i]->getTitulo()) ?><i class="material-icons right">more_vert</i></span>
-        <p><a href="noticia.php?id=0">Ver mas</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4"><?php echo($noticias[$i]->getTitulo()) ?><i class="material-icons right">close</i></span>
-        <small>Publicado: 1-dic-2015</small>
-        <p style=""><?php echo($noticias[$i]->getDescripcion()) ?></p>
-        <p><a href="<?php echo($noticias[$i]->getEnlace()) ?>">Ver mas...</a></p>
-      </div>
-    </div>
-    <?php
-      }
-    ?>
-</div>
+   <center>
+      <h1 class="titulo1"><?php echo($noticias[$idproducto]->getTitulo()) ?></h1>
+    </center>
+      <small>Publicado: 1-dic-2015</small>
+      <br>
+      <img class="responsive-img col s12 m12 l12 materialboxed" data-caption='<?php echo($noticias[$idproducto]->getTitulo()) ?>' src="images/noticias/noticia2.jpg">
+      <br>
+      <h1 class="contenido3"><?php echo($noticias[$idproducto]->getDescripcion()) ?></h1>
+  </div>
 <!-- ................   RIGHT ASIDE  - REDES SOCIALES ........................-->  
   <div class="col l4 m4 s12">
-    <center><div class="cabecera-facebook text-center">RedeCam</div></center>
-    <img src="images/redecam/images/redecam.png" alt="RedeCam" class="responsive-img">
-    <center>
-      <div class="cabecera-facebook text-center">Facebook</div>
-    </center>
-    <div class="fb-page" data-href="https://www.facebook.com/CideaCauca/?fref=ts" data-width="6000px" data-height="650px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DSTecOnLine/?fref=ts"><a href="https://www.facebook.com/DSTecOnLine/?fref=ts">DSTec</a></blockquote></div></div>
-  </div>
+  <!-- ..........social.......... -->
+    <div class="be-light-grey">
+        <div class="container  row valign-wrapper">
+            <h1 class="valign titulo1 center-align">CIDEA Social</h1>
+        </div>
+        <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
+            <img width="90%" src="images/facebook.png">
+        </div>
+        <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
+           <img width="90%" src="images/twitter.png">
+        </div>
+    </div>
+    historial
 </div>
-<!-- ..........VIDEO INSTITUCIONAL .......... -->
-<div class="row container">
-  <?php        
-    include_once("models/Datasource.php");
-    include_once("models/VideosDao.php");
-    include_once("models/Videos.php");
-    include_once("models/Variables.php");
-    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
-    $videosdao=new VideosDao();
-    $urlinicio=$videosdao->getObject($conn,1);
-    $urlnosotros=$videosdao->getObject($conn,2);
-  ?>
-  <div class="video-container">
-    <iframe width="400" height="280" src="<?php echo($urlinicio->getUrl()); ?>" frameborder="1" allowfullscreen></iframe>
-  </div>
-  <br>
-  <div class="divider"></div>
-  <br>
 </div>
 <!-- ................   PATROCINADORES   ........................--> 
- <div class="row container valign-wrapper">
- <ul class="center-align " style="background:#fff;" id="vinculos">
-      <li class="col s6 m3 l3 valign"><a href="https://www.minambiente.gov.co/" target="_blank"><img class="responsive-img" alt="Ministerio" style="width:90%;" src="images/patrocinadores/MinAmbiente.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.mincultura.gov.co" target="_blank"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinCultura.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.mintic.gov.co" target="_blank"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinTIC.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.mineducacion.gov.co" target="_blank"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinEducacion.png"></a></li>
-  </ul>
-  </div>
-  <div class="row container valign-wrapper">
-  <ul class="center-align" style="background:#fff" id="vinculos2">
-      <li class="col s6 m3 l3 valign"><a href="http://crc.gov.co/" target="_blank"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/CRC.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.cauca.gov.co/" target="_blank"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/GobCauca.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.sedcauca.gov.co/" target="_blank"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/GobCauca.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.colombiaaprende.edu.co" target="_blank"><img class="responsive-img" style="width:120%;" src="images/patrocinadores/ColAprende.png"></a></li>    
+ <ul class="row container" style="background:#fff" id="vinculos">
+      <li class="col s6 m4 l1">1</li>
+      <li class="col s6 m4 l1">2</li>
+      <li class="col s6 m4 l1">3</li>
+      <li class="col s6 m4 l1">4</li>
+      <li class="col s6 m4 l1">5</li>
+      <li class="col s6 m4 l1">6</li>
+      <li class="col s6 m4 l1">7</li>
+      <li class="col s6 m4 l1">8</li>
+      <li class="col s6 m4 l1">9</li>
+      <li class="col s6 m4 l1">10</li>
+      <li class="col s6 m4 l1">11</li>
+      <li class="col s6 m4 l1">12</li>
 </ul>
-</div>
-
 <!-- ................   FOOTER   ........................-->
 <footer class="be-grey">
   <div class="container">
@@ -238,9 +162,8 @@
       </div>
       <div class="col l3 m3 s12" style="margin-top:20px;">
         <h5 class="titulo-informativo">Redes Sociales</h5>
-          <a href="http://www.facebook.com/CideaCauca/"" target="_blank""><span><img class="valign" width="9%" src="images/facebook.png"></span> Facebook</a></br>
-          <a href="http://www.facebook.com/CideaCauca/"" target="_blank""><span><img class="valign" width="9%" src="images/twitter.png"></span> Facebook</a>
-          
+          <h3 class="valign contenido-informativo"><span><img class="valign" width="9%" src="images/facebook.png"></span> Facebook</h3>
+          <h3 class="valign contenido-informativo"><span><img class="valign" width="9%" src="images/twitter.png"></span> Twitter</h3>
       </div>
   </div>
 </footer>
@@ -256,8 +179,7 @@
     <script type="text/javascript" src="js/funciones.js"></script>
     <script type="text/javascript">
     var options = [
-    {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' },
-    {selector: '#vinculos2', offset: 300, callback: 'Materialize.showStaggeredList("#vinculos2")' },
+    {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' }
     ];
     Materialize.scrollFire(options);
     </script>
