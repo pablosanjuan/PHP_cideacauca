@@ -1,48 +1,31 @@
-<!DOCTYPE html>
-  <html>
-    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="../css/estilos.css"  media="screen,projection"/>
-      <!--..........metas............-->
-      <title>CIDEA Cauca</title>
-      <meta property="og:title" content="CIDEA Cauca" />
-      <meta property="og:type" content="article" />
-      <meta property="og:url" content="http://www.cideacauca.com.co" />
-      <meta property="og:image" content="http://cideacauca.com.co/images/CIDEA.png" />
-      <meta property="og:description" content="CIDEA Cauca. Comité Técnico Interinstitucional de Eduación Ambiental" />
-      <meta itemprop="name" content="CIDEA Cauca">
-      <meta itemprop="description" content="Yo ya estoy jugando Carrera Política y tu?">
-      <meta itemprop="image" content="http://cideacauca.com.co/images/CIDEA.png">
-      <meta name="twitter:image" content="http://cideacauca.com.co/images/CIDEA.png">
-      <!--..........FavIcons............-->
-      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/favicon/favicon16.png">
-      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/favicon/favicon64.png">
-      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/favicon/favicon128.png">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+<?php
+  $nombre=$_POST["nombre"];
+  $cel=$_POST["numcel"];
+  $email=$_POST["email"];
+  $mensaje=$_POST["mensaje"];
+  $cadena="Se ha recibido un mensaje enocontrará detalles a continuación.
+  <br>Información:<br>Nombre: ".$nombre."<br>Tel. Celular: ".$cel."
+  <br>Email de contacto: ".$email."<br>Mensaje: ".$mensaje."<br><br>Cordialmente,
+  <br>CIDEA Cauca<br>Mensaje enviado automáticamente";
+  $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+  $cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+  if(mail("felbo22@gmail.com","<Cor></Cor>reo enviado correctamente a CIDEA Cauca",$cadena,$cabeceras))
+  {
+    ?>
+    <meta http-equiv="REFRESH" content="0,url=../contacto.php">
+    <script type="text/javascript">
+      alert("Mensaje correctamente enviado");
+    </script>
+    <?php
+  }
+  else
+  {
+    ?>
+    <meta http-equiv="REFRESH" content="0,url=../contacto.php">
+    <script type="text/javascript">
+      alert("No se pudo enviar tu mensaje");
+    </script>
+    <?php
+  }
 
-<body>
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#funciona">que mas</a>
-
-  <!-- Modal Structure -->
-  <div id="funciona" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-
-<!-- ................   LIBRERIAS  JQUERY   ........................-->
-    <script type="text/javascript" src="../js/jquery.js"></script>
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
-    <script type="text/javascript" src="../js/funciones.js"></script>
-</body>
-</html>
+?>
