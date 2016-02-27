@@ -14,8 +14,12 @@
     <img width="20%" src="images/cidea.png">
     <h5 class="titulo1">PANEL DE ADMINISTRACION</h5>
   </div>
+<!-- ................   CERRAR SESION  ........................-->
+  <div class="container right-align col s12 m12 l12 row">
+    <a href="" class="cerrar right"><i class="material-icons left">close</i>Cerrar Sesion</a>
+  </div>
 <!-- ................   ESPACIO AZUL   ........................-->
-  <div class="degradado center-align ">
+  <div class="degradado center-align col s12 m12 l12">
     <h5 class="titulo2-blanco">Cidea Cauca</h5>
   </div>
 <!-- ................   NAV MOBILE   ........................-->
@@ -45,81 +49,71 @@
     <a href="admin_user.php" class="collection-item titulo4">Password</a>
   </div>
 <!-- ................   CONTENIDO DERECHA   ........................-->    
-  <div class="col s12 m12 l9" style="margin-top:10px">
-    <h5 class="contenido2 center-align">Panel de Administrador para modificar las Noticias. Mostrada la Pestaña de usuario "Inicio"</h5>
+ <div class="col s12 m12 l9" style="margin-top:10px">
+    <h5 class="contenido2 center-align">Panel de Administrador para modificar el carrusel de imagenes. Mostrad la Pestaña de usuario "Inicio"</h5>
     <br>
     <div class="divider col s12 m12 l12"></div>
     <br>
-      <h5 class="titulo2 center-align">Nueva Noticia</h5>
+      <h5 class="titulo2 center-align">Nueva Imagen</h5>
       <br>
-      <form method='POST' action='controllers/crear_noticias.php'>
+      <form method='POST' action='controllers/cambiar_banner.php'>
         <div class="input-field">
-          <i class="material-icons prefix">format_color_text</i>
+          <i class="material-icons prefix">font_download</i>
           <input id="first_name" type="text" class="materialize-textarea" name="titulo">
           <label for="first_name">Titulo</label>
         </div>
-        <div class="input-field">
-          <i class="material-icons prefix">link</i>
-          <input id="first_name" type="text" class="materialize-textarea" name="enlace">
-          <label for="first_name">Link</label>
-        </div>
         <div class="file-field input-field">
           <div class="btn rigth">
-            <span>Imagen de Apoyo</span>
-            <input type="file">
+            <span>Seleccionar Imagen</span>
+            <input type="file" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Solo Archivos con extension .jpg - .png">
           </div>
           <div class="file-path-wrapper">
-            <input class="file-path validate" type="text" name="ruta">
+            <input class="file-path validate tooltipped" type="text" name="ruta" data-position="top" data-delay="50" data-tooltip="Solo Archivos con extension .jpg - .png">
           </div>
         </div>
-        <br>
         <div class="input-field">
-          <i class="material-icons prefix">mode_edit</i>
-          <textarea id="first_name" type="text" class="materialize-textarea" name="descripcion"></textarea>
-          <label class="" for="first_name">Descripción</label>
+          <i class="material-icons prefix">vpn_key</i>
+          <input id="first_name" type="text" class="materialize-textarea tooltipped" name="propiedad" data-position="top" data-delay="50" data-tooltip="Referencia de la imagen con propiedad intelectual">
+          <label for="first_name">Propietario de la Imagen</label>
         </div>
         <br>
-        <button type="submit" class="waves-effect waves-light right btn"><i class="material-icons left">add</i>Agregar</button>
+        <button type="submit" class="waves-effect waves-light right btn"><i class="material-icons left">file_upload</i>Agregar Imagen</button>
         <br>
       </form>  
     <br>
     <div class="divider col s12 m12 l12"></div>
     <br>
-      <h5 class="titulo2 center-align col s12 m12 l12">Noticias Existentes</h5>
+      <h5 class="titulo2 center-align col s12 m12 l12">Actuales Imagenes en el Banner</h5>
     <br>
     <table class="bordered highlight">
         <thead>
           <tr>
-              <th data-field="titulo">Titulo</th>
-              <th data-field="name">Descripción</th>
-              <th data-field="name">Link</th>
               <th data-field="name">Imagen</th>
+              <th data-field="titulo">Titulo</th>
+              <th data-field="name">Propietario de la Imagen</th>
               <th data-field="price"></th>
               <th data-field="price"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><b>Ley 1549 del 2012</b></td>
-            <td>"Por la cual se fortalece la institucinoalización de la Politica Nacional de Educación Ambiental y su incorporación efectiva en el Desarrollo Territorial"</td>
-            <td><a rel="stylesheet" href="http://materializecss.com/" target="blank">http://materializecss.com/</a></td>
-            <td>Imagen</td>
+            <td ><img src="images/noticias/noticia1.jpg" class="materialboxed"></td>
+            <td><b>gota de agua</b></td>
+            <td>Pablo Sanjaun</td>
             <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">create</i>Modificar</a></td>
             <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">clear</i>Eliminar</a></td>
           </tr>
           <tr>
-            <td><b>Ley 1549 del 2012</b></td>
-            <td>"Por la cual se fortalece la institucinoalización de la Politica Nacional de Educación Ambiental y su incorporación efectiva en el Desarrollo Territorial"</td>
-            <td><a rel="stylesheet" href="http://materializecss.com/" target="blank">http://materializecss.com/</a></td>
-            <td>Imagen</td>
+            <td ><img src="images/noticias/noticia2.jpg" class="materialboxed"></td>
+            <td><b>gota de agua</b></td>
+            <td>Pablo Sanjaun</td>
             <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">create</i>Modificar</a></td>
             <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">clear</i>Eliminar</a></td>
           </tr>
         </tbody>
     </table>
-    <br>
-  </div>
-  <div class="divider col s12 m12 l12"></div>
+    </div>
+</div>
 <!-- ................   LIBRERIAS  JQUERY   ........................-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

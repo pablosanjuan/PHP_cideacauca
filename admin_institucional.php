@@ -21,6 +21,7 @@
 <nav class="hide-on-large-only degradado">
   <ul id="slide-out" class="side-nav">
     <li class="titulo2">Opciones</li>
+    <li><a href="admin_banner.php" class="collection-item titulo4">Banner</a></li>
     <li><a href="admin_noticias.php" class="collection-item titulo4">Noticias</a></li>
     <li><a href="admin_institucional.php" class="collection-item titulo4">Institucional</a></li>
     <li><a href="admin_documentos.php" class="collection-item titulo4">Documentos de Interes</a></li>
@@ -34,8 +35,9 @@
 <div class="row container">
   <div class="collection col s3 hide-on-med-and-down">
     <a class="collection-header titulo2">Opciones</a>
+    <a href="admin_banner.php" class="collection-item titulo4">Banner</a>
     <a href="admin_noticias.php" class="collection-item titulo4">Noticias</a>
-    <a href="admin_institucional.php" class="collection-item titulo4 active">Institucional</a>
+    <a href="admin_institucional.php" class="collection-item titulo4">Institucional</a>
     <a href="admin_documentos.php" class="collection-item titulo4">Documentos de Interes</a>
     <a href="admin_experiencias.php" class="collection-item titulo4">Experiencias</a>
     <a href="admin_contacto.php" class="collection-item titulo4">Contacto</a>

@@ -8,12 +8,16 @@
 	$titulo=$_POST["titulo"];
 	$descripcion=$_POST["descripcion"];
 	$tipo=$_POST["group"];
-	$ruta=$_POST["ruta"];
 	$documento=new Documentos();
+	$dirdoc=$_FILES["doc"]["tmp_name"];
+	$formatodoc=substr($_FILES["doc"]["name"], strrpos($_FILES["doc"]["name"], ".") );  //Obtener la última aparición del punto y por consiguiente, el formato
+	$destinodoc=$docLocation."/doc_".$titulo.$formatodoc;
 	$documento->setTitulo($titulo);
 	$documento->setDescripcion($descripcion);
-	$documento->setTipo($tipo);	
-	if($docdao->create($conn,$documento))
+	$documento->setTipo($tipo);
+	$documento->setRuta($destinodoc);
+	$correcto=true;
+	if($docdao->create($conn,$documento)&&move_uploaded_file($dirdoc, $destinodoc))
 	{
 		?>
 		<meta http-equiv="REFRESH" content="0,url=../admin_documentos.php">

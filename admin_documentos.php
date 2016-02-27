@@ -22,6 +22,7 @@
 <nav class="hide-on-large-only degradado">
   <ul id="slide-out" class="side-nav">
     <li class="titulo2">Opciones</li>
+    <li><a href="admin_banner.php" class="collection-item titulo4">Banner</a></li>
     <li><a href="admin_noticias.php" class="collection-item titulo4">Noticias</a></li>
     <li><a href="admin_institucional.php" class="collection-item titulo4">Institucional</a></li>
     <li><a href="admin_documentos.php" class="collection-item titulo4">Documentos de Interes</a></li>
@@ -35,9 +36,10 @@
 <div class="row container">
   <div class="collection col s3 hide-on-med-and-down">
     <a class="collection-header titulo2">Opciones</a>
+    <a href="admin_banner.php" class="collection-item titulo4">Banner</a>
     <a href="admin_noticias.php" class="collection-item titulo4">Noticias</a>
     <a href="admin_institucional.php" class="collection-item titulo4">Institucional</a>
-    <a href="admin_documentos.php" class="collection-item titulo4 active">Documentos de Interes</a>
+    <a href="admin_documentos.php" class="collection-item titulo4">Documentos de Interes</a>
     <a href="admin_experiencias.php" class="collection-item titulo4">Experiencias</a>
     <a href="admin_contacto.php" class="collection-item titulo4">Contacto</a>
     <a href="admin_user.php" class="collection-item titulo4">Password</a>
@@ -50,7 +52,7 @@
     <br>
       <h5 class="titulo2 center-align">Documento Nuevo</h5>
       <br>
-      <form action="controllers/crear_documento.php" method="POST">
+      <form enctype="multipart/form-data" onsubmit="return validarForm()" action="controllers/crear_documento.php" method="POST">
         <div class="input-field">
             <i class="material-icons prefix">format_color_text</i>
             <input id="first_name" name="titulo" type="text" class="materialize-textarea">
@@ -74,16 +76,17 @@
         <div class="file-field input-field">
           <div class="btn">
             <span>Archivo</span>
-            <input type="file">
+            <input type="file" id="doc" name="doc" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Solo Archivos con extension PDF - DOC - DOCX - JPG">
           </div>
           <div class="file-path-wrapper">
-            <input class="file-path validate" name="ruta" type="text">
+            <input class="file-path validate tooltipped" name="doc2" id="doc2" type="text" data-position="bottom" data-delay="50" data-tooltip="Solo Archivos con extension PDF - DOC - DOCX - JPG">
           </div>
         </div>
         <br>
         <button type="submit" class="waves-effect waves-light right btn"><i class="material-icons left">save</i>Guradar</button>
         <br>
-    </form>  
+    </form> 
+    <script type="text/javascript" src="js/subirDocumentos.js"></script>
     <br>
     <div class="divider col s12 m12 l12"></div>
     <br>

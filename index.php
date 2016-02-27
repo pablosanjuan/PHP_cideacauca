@@ -13,7 +13,6 @@
       <meta property="og:image" content="http://cideacauca.com.co/images/CIDEA.png" />
       <meta property="og:description" content="CIDEA Cauca. Comité Técnico Interinstitucional de Eduación Ambiental" />
       <meta itemprop="name" content="CIDEA Cauca">
-      <meta itemprop="description" content="Yo ya estoy jugando Carrera Política y tu?">
       <meta itemprop="image" content="http://cideacauca.com.co/images/CIDEA.png">
       <meta name="twitter:image" content="http://cideacauca.com.co/images/CIDEA.png">
       <!--..........FavIcons............-->
@@ -79,13 +78,13 @@
   </ul>
 </div>
 <!-- ................   SLIDER   ........................-->
-<div class="slider container" style="background:#fff; margin-top:5px;" id="id-slider">
+<div class="slider" style="background:#fff; margin-top:5px;" id="id-slider">
     <ul class="slides">
       <li>
         <img src="images/image1.jpg"> <!-- random image -->
         <div class="caption center-align">
           <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3"></h5>
+          <h5 class="light grey-text text-lighten-3">hola mundo</h5>
         </div>
       </li>
       <li>
@@ -123,6 +122,9 @@
       <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
        <a href="http://www.twitter.com/CideaCauca" target="_blank"><img width="90%" src="images/twitter.png"></a>
       </div>
+      <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
+       <a href="https://www.youtube.com/channel/UCGRpTPDYmTILxLHdQ1WM3sg" target="_blank"><img width="90%" src="images/youtube.png"></a>
+      </div>
     </div>
 </div>
 <!-- ................   LEFT ASIDE  - NOTICIAS ........................-->
@@ -154,7 +156,7 @@
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4"><?php echo($noticias[$i]->getTitulo()) ?><i class="material-icons right">close</i></span>
         <small>Publicado: 1-dic-2015</small>
-        <p style=""><?php echo($noticias[$i]->getDescripcion()) ?></p>
+        <p class="truncate"><?php echo($noticias[$i]->getDescripcion()) ?></p>
         <p><a href="<?php echo($noticias[$i]->getEnlace()) ?>">Ver mas...</a></p>
       </div>
     </div>

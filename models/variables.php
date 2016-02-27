@@ -3,4 +3,5 @@
 	$dbName="cideacauca";
 	$dbUser="root";
 	$dbPassword="";
+	$docLocation="../documentos"
 ?>
