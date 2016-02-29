@@ -12,12 +12,12 @@
       <meta property="og:title" content="CIDEA Cauca" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content="http://www.cideacauca.com.co" />
-      <meta property="og:image" content="http://cideacauca.com.co/images/CIDEA.png" />
+      <meta property="og:image" content="http://cideacauca.com.co/images/cidea.png" />
       <meta property="og:description" content="CIDEA Cauca. Comité Técnico Interinstitucional de Eduación Ambiental" />
       <meta itemprop="name" content="CIDEA Cauca">
-      <meta itemprop="description" content="Yo ya estoy jugando Carrera Política y tu?">
-      <meta itemprop="image" content="http://cideacauca.com.co/images/CIDEA.png">
-      <meta name="twitter:image" content="http://cideacauca.com.co/images/CIDEA.png">
+      <meta itemprop="description" content="CIDEA Cauca. Comité Técnico Interinstitucional de Eduación Ambiental">
+      <meta itemprop="image" content="http://cideacauca.com.co/images/cidea.png">
+      <meta name="twitter:image" content="http://cideacauca.com.co/images/cidea.png">
       <!--..........FavIcons............-->
       <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/favicon/favicon16.png">
       <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/favicon/favicon32.png">

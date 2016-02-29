@@ -3,5 +3,8 @@
 	$dbName="cideacauca";
 	$dbUser="root";
 	$dbPassword="";
-	$docLocation="../documentos"
+	$docLocation="../uploads/documentos";
+	$bannerLocation="../uploads/banner";
+	$noticiasLocation="../uploads/noticias";
+	$experienciasLocation="../uploads/experiencias";
 ?>

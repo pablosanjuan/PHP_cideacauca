@@ -10,11 +10,12 @@
       <meta property="og:title" content="CIDEA Cauca" />
       <meta property="og:type" content="article" />
       <meta property="og:url" content="http://www.cideacauca.com.co" />
-      <meta property="og:image" content="http://cideacauca.com.co/images/CIDEA.png" />
+      <meta property="og:image" content="http://cideacauca.com.co/images/cidea.png" />
       <meta property="og:description" content="CIDEA Cauca. Comité Técnico Interinstitucional de Eduación Ambiental" />
       <meta itemprop="name" content="CIDEA Cauca">
-      <meta itemprop="image" content="http://cideacauca.com.co/images/CIDEA.png">
-      <meta name="twitter:image" content="http://cideacauca.com.co/images/CIDEA.png">
+      <meta itemprop="description" content="CIDEA Cauca. Comité Técnico Interinstitucional de Eduación Ambiental">
+      <meta itemprop="image" content="http://cideacauca.com.co/images/cidea.png">
+      <meta name="twitter:image" content="http://cideacauca.com.co/images/cidea.png">
       <!--..........FavIcons............-->
       <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/favicon/favicon16.png">
       <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/favicon/favicon32.png">
@@ -80,34 +81,28 @@
 <!-- ................   SLIDER   ........................-->
 <div class="slider" style="background:#fff; margin-top:5px;" id="id-slider">
     <ul class="slides">
+  <?php
+    include_once("models/Datasource.php");
+    include_once("models/BannerDao.php");
+    include_once("models/Banner.php");
+    include_once("models/Variables.php");
+    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+    $bnndao=new BannerDao();
+    $banner=$bnndao->loadAll($conn);
+        for($i=0;$i<count($banner);$i++)
+        {
+    ?>
       <li>
-        <img src="images/image1.jpg"> <!-- random image -->
+        <img src="<?php echo($banner[$i]->getRuta()) ?>">
         <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">hola mundo</h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/image2.jpg"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
+          <h3></h3>
           <h5 class="light grey-text text-lighten-3"></h5>
         </div>
       </li>
-      <li>
-        <img src="images/image3.jpg"> <!-- random image -->
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3"></h5>
-        </div>
-      </li>
-      <li>
-        <img src="images/image2.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3"></h5>
-        </div>
-      </li>
+
+    <?php
+      }
+    ?>
     </ul>
   </div>
 <!-- ..........social.......... -->

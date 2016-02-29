@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-  <html>
+  <html lang="es">
     <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
       	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       	<link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
+      <!--..........metas............-->
+      <title>CIDEA Cauca</title>
+      <meta property="og:title" content="CIDEA Cauca" />
+      <meta property="og:type" content="article" />
+      <meta property="og:url" content="http://www.cideacauca.com.co" />
+      <meta property="og:image" content="http://cideacauca.com.co/images/cidea.png" />
+      <meta property="og:description" content="CIDEA Cauca. Comité Técnico Interinstitucional de Eduación Ambiental" />
+      <meta itemprop="name" content="CIDEA Cauca">
+      <meta itemprop="description" content="CIDEA Cauca. Comité Técnico Interinstitucional de Eduación Ambiental">
+      <meta itemprop="image" content="http://cideacauca.com.co/images/cidea.png">
+      <meta name="twitter:image" content="http://cideacauca.com.co/images/cidea.png">
+      <!--..........FavIcons............-->
+      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/favicon/favicon16.png">
+      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/favicon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/favicon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/favicon/favicon64.png">
+      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/favicon/favicon128.png">        
       	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
@@ -56,24 +73,24 @@
     <br>
       <h5 class="titulo2 center-align">Nueva Imagen</h5>
       <br>
-      <form method='POST' action='controllers/cambiar_banner.php'>
+      <form enctype="multipart/form-data" method='POST' action='controllers/cambiar_banner.php' >
         <div class="input-field">
           <i class="material-icons prefix">font_download</i>
-          <input id="first_name" type="text" class="materialize-textarea" name="titulo">
+          <input id="first_name" type="text" class="materialize-textarea" name="titulo" required title="Este campo es obligatorio">
           <label for="first_name">Titulo</label>
         </div>
         <div class="file-field input-field">
           <div class="btn rigth">
             <span>Seleccionar Imagen</span>
-            <input type="file" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Solo Archivos con extension .jpg - .png">
+            <input type="file" name="foto" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Solo Archivos con extension .jpg - .png ... Preferilemente mas ancha que alta">
           </div>
           <div class="file-path-wrapper">
-            <input class="file-path validate tooltipped" type="text" name="ruta" data-position="top" data-delay="50" data-tooltip="Solo Archivos con extension .jpg - .png">
+            <input class="file-path validate tooltipped" type="text" data-position="top" data-delay="50" data-tooltip="Solo Archivos con extension .jpg - .png">
           </div>
         </div>
         <div class="input-field">
           <i class="material-icons prefix">vpn_key</i>
-          <input id="first_name" type="text" class="materialize-textarea tooltipped" name="propiedad" data-position="top" data-delay="50" data-tooltip="Referencia de la imagen con propiedad intelectual">
+          <input id="first_name" type="text" class="materialize-textarea tooltipped" name="propietario" data-position="top" data-delay="50" data-tooltip="Referencia de la imagen con propiedad intelectual">
           <label for="first_name">Propietario de la Imagen</label>
         </div>
         <br>
@@ -85,7 +102,7 @@
     <br>
       <h5 class="titulo2 center-align col s12 m12 l12">Actuales Imagenes en el Banner</h5>
     <br>
-    <table class="bordered highlight">
+    <table class="highlight">
         <thead>
           <tr>
               <th data-field="name">Imagen</th>
@@ -96,20 +113,29 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td ><img src="images/noticias/noticia1.jpg" class="materialboxed"></td>
-            <td><b>gota de agua</b></td>
-            <td>Pablo Sanjaun</td>
-            <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">create</i>Modificar</a></td>
-            <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">clear</i>Eliminar</a></td>
-          </tr>
-          <tr>
-            <td ><img src="images/noticias/noticia2.jpg" class="materialboxed"></td>
-            <td><b>gota de agua</b></td>
-            <td>Pablo Sanjaun</td>
-            <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">create</i>Modificar</a></td>
-            <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">clear</i>Eliminar</a></td>
-          </tr>
+         
+<?php
+    include_once("models/Datasource.php");
+    include_once("models/BannerDao.php");
+    include_once("models/Banner.php");
+    include_once("models/Variables.php");
+    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+    $bnndao=new BannerDao();
+    $banner=$bnndao->loadAll($conn);
+        for($i=0;$i<count($banner);$i++)
+        {
+    ?>
+      <tr class="">
+        <td class=""><img class="ancho_max materialboxed" src="<?php echo($banner[$i]->getRuta()) ?>"></td>
+        <td><b><?php echo($banner[$i]->getTitulo()) ?></b></td>
+        <td><?php echo($banner[$i]->getPropietario()) ?></td>
+        <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">create</i>Modificar</a></td>
+        <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">clear</i>Eliminar</a></td>
+      </tr>
+
+    <?php
+      }
+    ?>
         </tbody>
     </table>
     </div>
