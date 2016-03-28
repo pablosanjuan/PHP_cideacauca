@@ -69,7 +69,7 @@
     <br>
       <h5 class="titulo2 center-align">Nueva Noticia</h5>
       <br>
-      <form method='POST' action='controllers/crear_noticias.php'>
+      <form enctype="multipart/form-data" method='POST' action='controllers/crear_noticias.php'>
         <div class="input-field">
           <i class="material-icons prefix">format_color_text</i>
           <input id="first_name" type="text" class="materialize-textarea" name="titulo">
@@ -83,10 +83,10 @@
         <div class="file-field input-field">
           <div class="btn rigth">
             <span>Imagen de Apoyo</span>
-            <input type="file">
+            <input type="file" name="foto" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Solo Archivos con extension .jpg - .png">
           </div>
           <div class="file-path-wrapper">
-            <input class="file-path validate" type="text" name="ruta">
+            <input class="file-path validate" type="text" name="nomfoto">
           </div>
         </div>
         <br>

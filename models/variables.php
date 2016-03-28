@@ -5,6 +5,6 @@
 	$dbPassword="";
 	$docLocation="../uploads/documentos";
 	$bannerLocation="../uploads/banner";
-	$noticiasLocation="../uploads/noticias";
+	$notLocation="../uploads/noticias";
 	$experienciasLocation="../uploads/experiencias";
 ?>

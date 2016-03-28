@@ -126,7 +126,7 @@
         {
     ?>
       <tr class="">
-        <td class=""><img class="ancho_max materialboxed" src="<?php echo($banner[$i]->getRuta()) ?>"></td>
+        <td class=""><img width="50" class="materialboxed" src="<?php echo($banner[$i]->getRuta()) ?>"></td>
         <td><b><?php echo($banner[$i]->getTitulo()) ?></b></td>
         <td><?php echo($banner[$i]->getPropietario()) ?></td>
         <td><a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">create</i>Modificar</a></td>

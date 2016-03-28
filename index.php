@@ -140,21 +140,18 @@
         for($i=0;$i<count($noticias);$i++)
         {
     ?>
-    <div class="card hoverable">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="images/noticias/noticia2.jpg">
+      <div class="card Grande">
+        <div class="card-image">
+          <img src="<?php echo($noticias[$i]->getRuta()) ?>">
+        </div>
+        <div class="card-content">
+        <span class="card-title titulo_not"><?php echo($noticias[$i]->getTitulo()) ?></span>
+          <p class="truncate"><?php echo($noticias[$i]->getDescripcion()) ?></p>
+        </div>
+        <div class="card-action">
+          <a href="<?php echo($noticias[$i]->getEnlace()) ?>">Ver Mas..</a>
+        </div>
       </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4"><?php echo($noticias[$i]->getTitulo()) ?><i class="material-icons right">more_vert</i></span>
-        <p><a href="noticia.php?id=0">Ver mas</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4"><?php echo($noticias[$i]->getTitulo()) ?><i class="material-icons right">close</i></span>
-        <small>Publicado: 1-dic-2015</small>
-        <p class="truncate"><?php echo($noticias[$i]->getDescripcion()) ?></p>
-        <p><a href="<?php echo($noticias[$i]->getEnlace()) ?>">Ver mas...</a></p>
-      </div>
-    </div>
     <?php
       }
     ?>

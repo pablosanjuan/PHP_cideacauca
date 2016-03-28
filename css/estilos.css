@@ -156,6 +156,11 @@ footer {
 	font-size: 14px;
 }
 
+.titulo_not{
+	font-family: tittle-text-regular;
+	color:#16a085 !important;
+	font-size: 38px;
+}
 .titulo1{
 	font-family: tittle-text-regular;
 	color:#16a085;
@@ -301,4 +306,5 @@ footer {
 
 .ancho_max{
 	width: 50px !important;
+	height: 50px !important;
 }
