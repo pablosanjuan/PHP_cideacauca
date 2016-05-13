@@ -112,8 +112,16 @@
       <img src="images/contacto.jpg" style="width:100%">
     </div>
   </div>
+<!-- ................   imagen parallax ........................-->
+  <div class="parallax-container hide-on-med-and-down">
+    <div class="parallax"><img src="images/somos.jpg"></div>
+  </div>
+
  <!-- ................   Enlaces Patrocinados   ........................-->
 <div class="row ">
+<div>
+  <h5 class="center-align">TITULO</h5>
+</div>
  <ul class="center-align " style="background:#fff;">
       <li class="col s6 m2 l2 valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Min Ambiente"><img class="responsive-img" alt="Ministerio" style="width:90%;" src="images/patrocinadores/MinAmbiente.png"></a></li>
       <li class="col s6 m2 l2 valign"><a href="http://www.mincultura.gov.co" target="_blank" title="Min Cultura"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinCultura.png"></a></li>
@@ -133,12 +141,17 @@
 
        
       <li class="col s6 m2 l2 valign"><a href="http://www.unicauca.edu.co/" target="_blank" title="Universidad del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/unicauca.png"></a></li>
-      
+
       <li class="col s6 m2 l2 valign"><a href="http://www.uniautonoma.edu.co/" target="_blank" title="Universidad Autónoma del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/uniautonoma.png"></a></li>
       <li class="col s6 m2 l2 valign"><a href="http://fup.edu.co/" target="_blank" title="Fundación Universitaria de Popayán"><img class="responsive-img" style="width:50%;" src="images/patrocinadores/fup.png"></a></li>
       <li class="col s6 m2 l2 valign"><a href="http://www.dstec.co" target="_blank" title="DSTec - Soluciones Tecnológicas"><img class="responsive-img" style="width:100%;" src="images/patrocinadores/dstec.png"></a></li>    
 </ul>
 </div>
+
+<!-- ................   imagen parallax ........................-->
+  <div class="parallax-container hide-on-med-and-down">
+    <div class="parallax"><img src="images/mision.jpg"></div>
+  </div>
 
 <!-- ................   FOOTER   ........................-->
 <footer class="be-grey">

@@ -24,9 +24,7 @@ function initialize() {
       }
 );}
 
-<<<<<<< HEAD
-=======
 $(document).ready(function(){
   $('.parallax').parallax();
 });
->>>>>>> 1275d906f359ec736152dba77df8dad541527d54
+
