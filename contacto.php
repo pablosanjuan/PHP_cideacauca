@@ -112,23 +112,31 @@
       <img src="images/contacto.jpg" style="width:100%">
     </div>
   </div>
- <!-- ................   FOOTER   ........................-->
+ <!-- ................   Enlaces Patrocinados   ........................-->
+<div class="row ">
+ <ul class="center-align " style="background:#fff;">
+      <li class="col s6 m2 l2 valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Min Ambiente"><img class="responsive-img" alt="Ministerio" style="width:90%;" src="images/patrocinadores/MinAmbiente.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.mincultura.gov.co" target="_blank" title="Min Cultura"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinCultura.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.mintic.gov.co" target="_blank" title="Min TIC"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinTIC.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.mineducacion.gov.co" target="_blank" title="Min Educación"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinEducacion.png"></a></li>
 
-
-<div class="row container valign-wrapper">
- <ul class="center-align " style="background:#fff;" id="vinculos">
-      <li class="col s6 m3 l3 valign"><a href="https://www.minambiente.gov.co/" target="_blank"><img class="responsive-img" alt="Ministerio" style="width:90%;" src="images/patrocinadores/MinAmbiente.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.mincultura.gov.co" target="_blank"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinCultura.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.mintic.gov.co" target="_blank"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinTIC.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.mineducacion.gov.co" target="_blank"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinEducacion.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://crc.gov.co/" target="_blank" title="CRC"><img class="responsive-img" style="width:75%;" src="images/patrocinadores/CRC.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.colombiaaprende.edu.co" target="_blank" title="Colombia Aprende"><img class="responsive-img" style="width:120%;" src="images/patrocinadores/ColAprende.png"></a></li>   
+      
   </ul>
   </div>
-  <div class="row container valign-wrapper">
-  <ul class="center-align" style="background:#fff" id="vinculos2">
-      <li class="col s6 m3 l3 valign"><a href="http://crc.gov.co/" target="_blank"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/CRC.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.cauca.gov.co/" target="_blank"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/GobCauca.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.sedcauca.gov.co/" target="_blank"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/GobCauca.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.colombiaaprende.edu.co" target="_blank"><img class="responsive-img" style="width:120%;" src="images/patrocinadores/ColAprende.png"></a></li>    
+  <div class="row  ">
+  <ul class="center-align" style="background:#fff">
+
+      <li class="col s6 m2 l2 valign"><a href="http://www.cauca.gov.co/" target="_blank" title="Gob. del Cauca"><img class="responsive-img" style="width:70%;" src="images/patrocinadores/GobCauca1.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.sedcauca.gov.co/" target="_blank" title="Gob. del Cauca - Secretaría de Educación"><img class="responsive-img" style="width:70%;" src="images/patrocinadores/GobCaucaSE.png"></a></li>
+
+       
+      <li class="col s6 m2 l2 valign"><a href="http://www.unicauca.edu.co/" target="_blank" title="Universidad del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/unicauca.png"></a></li>
+      
+      <li class="col s6 m2 l2 valign"><a href="http://www.uniautonoma.edu.co/" target="_blank" title="Universidad Autónoma del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/uniautonoma.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://fup.edu.co/" target="_blank" title="Fundación Universitaria de Popayán"><img class="responsive-img" style="width:50%;" src="images/patrocinadores/fup.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.dstec.co" target="_blank" title="DSTec - Soluciones Tecnológicas"><img class="responsive-img" style="width:100%;" src="images/patrocinadores/dstec.png"></a></li>    
 </ul>
 </div>
 
@@ -176,12 +184,5 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/funciones.js"></script>
-    <script type="text/javascript">
-    var options = [
-    {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' },
-    {selector: '#vinculos2', offset: 300, callback: 'Materialize.showStaggeredList("#vinculos2")' },
-    ];
-    Materialize.scrollFire(options);
-    </script>
  </body>
 </html>
