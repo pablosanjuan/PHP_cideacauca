@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.slider').slider({full_width: true});
+  $('.slider').slider({full_width: false});
 });
 
 $(".button-collapse").sideNav();
@@ -23,3 +23,7 @@ function initialize() {
           title:"CideaCauca - CRC"    
       }
 );}
+
+$(document).ready(function(){
+  $('.parallax').parallax();
+});

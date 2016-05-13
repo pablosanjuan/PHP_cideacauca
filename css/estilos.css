@@ -82,6 +82,20 @@ footer {
 	font-family: normal-text;
 }
 
+.nav-menu{
+	color: #000;
+	text-decoration: none;
+	font-size: 18px !important;
+	font-family: tittle-text-bold;
+}
+
+.redecam{
+	color: #000;
+	text-decoration: none;
+	font-size: 25px !important;
+	font-family: tittle-text-bold;
+}
+
 .animation-nav{
 	position: relative;
 	color: #fff;
@@ -131,18 +145,11 @@ footer {
 	font-size: 20px;
 }
 
-.cabecera-facebook2{
-	background: #A8CF45;
+.cabecera-youtube{
+	background: #f00;
 	font-family: tittle-text-regular;
 	color:#fff;
 	font-size: 20px;
-}
-
-.verde{
-	background: #16a085;
-	font-family: tittle-text-regular;
-	color:#fff;
-	font-size: 40px;
 }
 
 .cabecera-twitter{

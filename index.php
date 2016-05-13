@@ -43,8 +43,12 @@
     <a href="index.php"><img class="left-align responsive-img" src="images/cidea2.png"></a>
   </div>
 </div>
+<!-- ................   floating buttom   ........................-->
+<div data-activates="slide-out" class="hide-on-large-only fixed-action-btn button-collapse" style="bottom: 35px; right: 24px;">
+  <a class="btn-floating waves-effect waves-light btn-large black z-depth-5"><i class="material-icons">menu</i></a>
+</div>
 <!-- ................   NAVIGATION BAR   ........................-->
-<nav class="barra be-black z-depth-5">
+<nav class="be-black z-depth-5" >
 <div class="container">
   <ul class="right hide-on-med-and-down">
     <li><a class="animation-nav active-nav" href="index.php">Inicio</a></li>
@@ -56,19 +60,26 @@
   </ul>
   <!-- ................  MOBILE NAVIGATION BAR   ........................-->
   <ul id="slide-out" class="side-nav">
-    <li class="titulo2">Menu Cidea</li>
-    <li><a class="mobile-item-nav contenido1" href="index.php" value="hola">Inicio</a></li>
-    <li><a class="mobile-item-nav contenido1" href="nosotros.php">Nosotros</a></li>
-    <li><a class="mobile-item-nav contenido1" href="documentos.php">Documentos</a></li>
-    <li><a class="mobile-item-nav contenido1" href="experiencias.php">Experiencias</a></li>
-    <li><a class="mobile-item-nav contenido1" href="redecam.php">Redecam</a></li>
-    <li><a class="mobile-item-nav contenido1" href="contacto.php">Contacto</a></li>
+    <li><img style="margin-top: 10px" src="images/cidea.png" class="col s12 responsive-img"></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="index.php"><i class=" material-icons orange-text">home</i> Inicio</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light  mobile-item-nav nav-menu" href="nosotros.php"><i class=" material-icons green-text">account_circle</i> Nosotros</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="documentos.php"><i class=" material-icons blue-text">attachment</i> Documentos</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="experiencias.php"><i class=" material-icons brown-text">collections</i> Experiencias</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="redecam.php"><i class=" material-icons purple-text">filter_vintage</i> Redecam</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="contacto.php"><i class=" material-icons red-text">contacts</i> Contacto</a></li>
+    <div class="divider"></div>
   </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+  <a href="#" data-activates="slide-out" class="hide-on-med-and-down button-collapse"><i class="material-icons">menu</i></a>
 </div>
 </nav>
 <!-- ................   SLIDER   ........................-->
-<div class="slider" style="background:#fff; z-index: -2" id="id-slider">
+<div class="slider container" style="background:#fff;" id="id-slider">
     <ul class="slides">
   <?php
     include_once("models/Datasource.php");
@@ -93,86 +104,66 @@
     ?>
     </ul>
   </div>
-<!-- ..........social.......... -->
-<div class="be-light-grey">
-    <div class="container  row valign-wrapper">
-      <div class="col l8 m8 s12">
-        <h1 class="valign titulo1 center-align">CIDEA Social</h1>
-      </div>
-      <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
-        <a href="http://www.facebook.com/CideaCauca" target="_blank"><img width="90%" src="images/facebook.png"></a>
-      </div>
-      <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
-       <a href="http://www.twitter.com/CideaCauca" target="_blank"><img width="90%" src="images/twitter.png"></a>
-      </div>
-      <div class="valign center-align col l1 m1 s12" style="margin-top:20px;">
-       <a href="https://www.youtube.com/channel/UCGRpTPDYmTILxLHdQ1WM3sg" target="_blank"><img width="90%" src="images/youtube.png"></a>
-      </div>
-    </div>
-</div>
-<!-- ................   LEFT ASIDE  - NOTICIAS ........................-->
-<div class="divider container"></div><br>
-<div class="row container" style="background:#fff">
-  <div class="largo-fijo col l8 m8 s12">
-    <center>
-      <h1 class="verde">Noticias</h1>
-    </center>
-  <?php
-    include_once("models/Datasource.php");
-    include_once("models/NoticiasDao.php");
-    include_once("models/Noticias.php");
-    include_once("models/Variables.php");
-    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
-    $ndao=new NoticiasDao();
-    $noticias=$ndao->loadAll($conn);
-        for($i=0;$i<count($noticias);$i++)
-        {
-    ?>
-      <div class="card Grande">
-        <div class="card-image">
-          <img src="<?php echo($noticias[$i]->getRuta()) ?>">
-        </div>
-        <div class="card-content">
-        <span class="card-title titulo_not"><?php echo($noticias[$i]->getTitulo()) ?></span>
-          <p class="truncate"><?php echo($noticias[$i]->getDescripcion()) ?></p>
-        </div>
-        <div class="card-action">
-          <a href="<?php echo($noticias[$i]->getEnlace()) ?>">Ver Mas..</a>
-        </div>
-      </div>
-    <?php
-      }
-    ?>
-</div>
-<!-- ................   RIGHT ASIDE  - REDES SOCIALES ........................-->  
-  <div class="col l4 m4 s12">
-    <center><div class="cabecera-facebook2 text-center">RedeCam</div></center>
+  <br>
+  <div class="container divider"></div>
+  <br>
+<!-- ................   imagen parallax ........................-->
+  <div class="parallax-container hide-on-med-and-down">
+    <div class="parallax"><img src="images/somos.jpg"></div>
+  </div>
+<!-- ................   redecam ........................-->
+  <div class="row container">
+    <div class="col s12 m4 offset-m2">
     <img src="images/redecam/images/redecam.png" alt="RedeCam" class="responsive-img">
+    </div>
+    <div class="col s12 m8">
     <center>
-      <div class="cabecera-facebook text-center">Facebook</div>
+    <h6 class="redecam">aqui algo que hable sobre redecam</h6>
+    <br>
+      <a class="waves-effect waves-light btn" href="redecam.php"><i class="material-icons right">forward</i>Ingresar</a>
     </center>
-    <div class="fb-page" data-href="https://www.facebook.com/CideaCauca/?fref=ts" data-width="6000px" data-height="650px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DSTecOnLine/?fref=ts"><a href="https://www.facebook.com/DSTecOnLine/?fref=ts">DSTec</a></blockquote></div></div>
+    </div>
   </div>
-</div>
-<!-- ..........VIDEO INSTITUCIONAL .......... -->
-<div class="row container">
-  <?php        
-    include_once("models/Datasource.php");
-    include_once("models/VideosDao.php");
-    include_once("models/Videos.php");
-    include_once("models/Variables.php");
-    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
-    $videosdao=new VideosDao();
-    $urlinicio=$videosdao->getObject($conn,1);
-    $urlnosotros=$videosdao->getObject($conn,2);
-  ?>
-  <div class="video-container">
-    <iframe width="400" height="280" src="<?php echo($urlinicio->getUrl()); ?>" frameborder="1" allowfullscreen></iframe>
+<!-- ................   imagen parallax ........................-->
+  <div class="parallax-container hide-on-med-and-down">
+    <div class="parallax"><img src="images/somos.jpg"></div>
   </div>
-  <br>
-  <div class="divider"></div>
-  <br>
+<!-- ..........social.......... -->
+<div class="be-light-grey" style="padding-bottom: 10px">
+<div class="container row">
+      <h1 class="col s12 titulo1 center-align">CIDEA Social</h1>
+      <!-- ..........columna facebbok.......... -->
+      <div class="col s12 m5" style="margin-top:20px;">
+        <center>
+          <div class="cabecera-facebook text-center">Facebook</div>
+        </center>
+        <div class="fb-page" data-href="https://www.facebook.com/CideaCauca/?fref=ts" data-width="1000px" data-height="300px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DSTecOnLine/?fref=ts"><a href="https://www.facebook.com/DSTecOnLine/?fref=ts">DSTec</a></blockquote></div></div>
+      </div>
+      <!-- ..........columna youtube.......... -->
+      <div class="col s12 m7" style="margin-top:20px;">
+        <center>
+          <div class="cabecera-youtube text-center">Youtube</div>
+        </center>
+        <?php        
+          include_once("models/Datasource.php");
+          include_once("models/VideosDao.php");
+          include_once("models/Videos.php");
+          include_once("models/Variables.php");
+          $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+          $videosdao=new VideosDao();
+          $urlinicio=$videosdao->getObject($conn,1);
+          $urlnosotros=$videosdao->getObject($conn,2);
+        ?>
+        <div class="video-container">
+        <iframe width="auto" height="650" src="<?php echo($urlinicio->getUrl());?>" allowfullscreen></iframe>
+        </div>
+      </div>
 </div>
+</div>
+<!-- ................   imagen parallax ........................-->
+  <div class="parallax-container hide-on-med-and-down">
+    <div class="parallax"><img src="images/mision.jpg"></div>
+  </div>
 <!-- ................   PATROCINADORES   ........................--> 
  <div class="row container valign-wrapper">
  <ul class="center-align " style="background:#fff;" id="vinculos">
@@ -197,7 +188,7 @@
       <div class="col l6 m6 s12">
           <div id="map_canvas" style="width:auto; height:250px; margin-top:20px"></div>
       </div>
-      <div class="col l3 m3 s12" style="margin-top:20px;">
+      <div class="col l3 m3 s6" style="margin-top:20px;">
         <h5 class="titulo-informativo">Contacto</h5>
         <?php        
             include_once("models/Datasource.php");
@@ -217,7 +208,7 @@
           <h6 class="contenido-informativo"><i class="tiny material-icons">person_pin</i><?php echo('  '.$direccion->getDescripcion());?></h6>
           <h6 class="contenido-informativo"><i class="tiny material-icons">location_on</i> Popayan - Cauca</h6>
       </div>
-      <div class="col l3 m3 s12" style="margin-top:20px;">
+      <div class="col l3 m3 s6" style="margin-top:20px;">
         <h5 class="titulo-informativo">Redes Sociales</h5>
           <a style="margin:5px" class="valign-wrapper" href="http://www.facebook.com/CideaCauca/" target="_blank"><span class="valign" ><img class="valign" width="60%" src="images/facebook.png"></span> Facebook</a>
           <a style="margin:5px" class="valign-wrapper" href="http://www.facebook.com/CideaCauca/" target="_blank"><span><img class="valign" width="70%" src="images/twitter.png"></span> Twitter</a>
@@ -239,13 +230,6 @@
     $(document).ready(function(){
       $('.barra').pushpin({ top: $('.barra').offset().top });
     });
-    </script>
-    <script type="text/javascript">
-    var options = [
-    {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' },
-    {selector: '#vinculos2', offset: 300, callback: 'Materialize.showStaggeredList("#vinculos2")' },
-    ];
-    Materialize.scrollFire(options);
     </script>
  </body>
 </html>
