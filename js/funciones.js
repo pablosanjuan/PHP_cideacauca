@@ -1,24 +1,8 @@
+$(document).ready(function(){
+  $('.slider').slider({full_width: true});
+});
+
 $(".button-collapse").sideNav();
-// Pause slider
-$('.slider').slider('pause');
-// Start slider
-$('.slider').slider('start');
-// Next slide
-$('.slider').slider('next');
-// Previous slide
-$('.slider').slider('prev');
-
-    $(document).ready(function(){
-    $('.slider').slider({full_width: true});
-    });
-
-    $(document).ready(function(){
-    $('.barra-nav .row').pushpin({ top: $('.barra-nav').offset().top });
-  });
-
-    $(document).ready(function() {
-      $('.modal-trigger').leanModal();
-    });
 
 function initialize() {
           var latlng = new google.maps.LatLng(2.4445416,-76.6058154);
@@ -38,5 +22,4 @@ function initialize() {
           map: map,
           title:"CideaCauca - CRC"    
       }
-
-      );}
+);}
