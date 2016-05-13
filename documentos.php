@@ -5,6 +5,17 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
+      <link type='text/css' rel='stylesheet' href='css/liquidcarousel.css' />
+      <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+      <script type="text/javascript" src="js/jquery.liquidcarousel.pack.js"></script>
+      <script type="text/javascript">
+      <!--
+        $(document).ready(function() {
+          $('#liquid1').liquidcarousel({height:129, duration:800, hidearrows:false});
+        });
+      -->
+      </script>
+
       <!--..........metas............-->
       <title>CIDEA Cauca</title>
       <meta property="og:title" content="CIDEA Cauca" />
@@ -26,6 +37,7 @@
       <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
     </head>
 <body onload="initialize(), Materialize.showStaggeredList('#opciones-nav')">
+
 <!-- ................   INICIALIZACION DE FACEBOOK   ........................-->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -61,20 +73,7 @@
       </ul>
     </div>
   </nav>
-<!-- ................   FLOATING BUTTOM   ........................-->
-<div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
-  <a class="btn-floating btn-large">
-    <i class="material-icons">menu</i>
-  </a>
-  <ul>
-    <li><a class="btn-floating tooltipped" data-position="left" data-delay="10" data-tooltip="Inicio" alt="Nosotros" href="index.php"><i class="material-icons">store</i></a></li>
-    <li><a class="btn-floating red tooltipped" data-position="left" data-delay="10" data-tooltip="Nosotros" alt="Nosotros" href="nosotros.php"><i class="material-icons">supervisor_account</i></a></li>
-    <li><a class="btn-floating blue tooltipped" data-position="left" data-delay="10" data-tooltip="Documentos" alt="Documentos" href="documentos.php"><i class="material-icons">description</i></a></li>
-    <li><a class="btn-floating purple darken-3 tooltipped" data-position="left" data-delay="10" data-tooltip="Experiencias" alt="Experiencias" href="experiencias.php"><i class="material-icons">loyalty</i></a></li>
-    <li><a class="btn-floating green tooltipped" data-position="left" data-delay="10" data-tooltip="Redecam" alt="Redecam" href="redecam.php"><i class="material-icons">brightness_5</i></a></li>
-    <li><a class="btn-floating red accent-3 tooltipped" data-position="left" data-delay="10" data-tooltip="Contacto" alt="Contacto" href="contacto.php"><i class="material-icons">contact_phone</i></a></li>
-  </ul>
-</div>
+
 <!-- ................   Contenido   ........................-->
 </br></br>
 <h1 class="container contenido1  col s12 m12 l12 center-align">Documentos de interés</h1>
@@ -160,6 +159,26 @@
       <li class="col s6 m3 l3 valign"><a href="http://www.colombiaaprende.edu.co" target="_blank"><img class="responsive-img" style="width:120%;" src="images/patrocinadores/ColAprende.png"></a></li>    
 </ul>
 </div>
+
+<div id="liquid1" class="row container liquid">
+  <span class="previous"></span>
+  <div class="wrapper">
+    <ul>
+      <li class="valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Min Ambiente"><img class="responsive-img" src="images/patrocinadores/MinAmbiente.png" width="100%" alt="Min Ambiente" border="0" /></a></li>
+      <li class="valign"><a href="https://www.mincultura.gov.co/" target="_blank" title="Min Cultura"><img class="responsive-img" src="images/patrocinadores/MinCultura.png" width="100%" alt="Min Cultura" border="0" /></a></li>
+      <li class="valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Min TIC"><img class="responsive-img" src="images/patrocinadores/MinTIC.png" width="100%" alt="Min TIC" border="0" /></a></li>
+      <li class="valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Min Educación"><img class="responsive-img" src="images/patrocinadores/MinEducacion.png" width="100%" alt="Min Educación" border="0" /></a></li>
+      <li class="valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="CRC"><img class="responsive-img" src="images/patrocinadores/CRC.png" width="100%" alt="CRC" border="0" /></a></li>
+      <li class="valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Gob. del Cauca"><img class="responsive-img" src="images/patrocinadores/GobCauca.png" width="100%" alt="Gob. del Cauca" border="0" /></a></li>
+      <li class="valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Gob. del Cauca - Secretaría de Educación"><img class="responsive-img" src="images/patrocinadores/GobCauca.png" width="100%" alt="Gob. del Cauca - Secretaría de Educación" border="0" /></a></li>
+      <li class="valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Colombia Aprende"><img class="responsive-img" src="images/patrocinadores/ColAprende.png" width="100%" alt="Colombia Aprende" border="0" /></a></li>
+
+    </ul>
+  </div>
+  <span class="next"></span>
+</div>
+
+
 <!-- ................   FOOTER   ........................-->
 <footer class="be-grey">
   <div class="container">
@@ -204,6 +223,11 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/funciones.js"></script>
+    
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.liquidcarousel.pack.js"></script>
+    <script type="text/javascript">
+
     <script type="text/javascript">
    var options = [
     {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' },
