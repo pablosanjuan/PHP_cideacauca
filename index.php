@@ -43,10 +43,6 @@
     <a href="index.php"><img class="left-align responsive-img" src="images/cidea2.png"></a>
   </div>
 </div>
-<!-- ................   floating buttom   ........................-->
-<div data-activates="slide-out" class="hide-on-large-only fixed-action-btn button-collapse" style="bottom: 35px; right: 24px;">
-  <a class="btn-floating waves-effect waves-light btn-large black z-depth-5"><i class="material-icons">menu</i></a>
-</div>
 <!-- ................   NAVIGATION BAR   ........................-->
 <nav class="be-black z-depth-3" >
 <div class="container">
@@ -75,7 +71,7 @@
     <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="contacto.php"><i class=" material-icons red-text">contacts</i> Contacto</a></li>
     <div class="divider"></div>
   </ul>
-  <a href="#" data-activates="slide-out" class="hide-on-med-and-down button-collapse"><i class="material-icons">menu</i></a>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 </div>
 </nav>
 <!-- ................   SLIDER   ........................-->
