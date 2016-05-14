@@ -78,6 +78,10 @@
   <a href="#" data-activates="slide-out" class="hide-on-med-and-down button-collapse"><i class="material-icons">menu</i></a>
 </div>
 </nav>
+<!-- ................   imagen parallax ........................-->
+  <div class="parallax-container hide-on-med-and-down">
+    <div class="parallax"><img src="images/somos.jpg"></div>
+  </div>
 <!-- ................   FORM CONTACTO   ........................-->
   <div class="row container">
     <form class="col s12 m6 l6" method="POST" action="controllers/contacto.php">
@@ -113,11 +117,9 @@
       <img src="images/contacto.jpg" style="width:100%">
     </div>
   </div>
-<!-- ................   imagen parallax ........................-->
-  <div class="parallax-container hide-on-med-and-down">
-    <div class="parallax"><img src="images/somos.jpg"></div>
-  </div>
-
+</br>
+<div class="divider"></div>
+</br>
  <!-- ................   Enlaces Patrocinados   ........................-->
 <div class="row ">
 <div>
