@@ -105,7 +105,7 @@ footer {
 }
 
 .animation-nav:hover {
-  color: #00B287;
+  color: #DBC600;
 }
 
 .animation-nav:before {
@@ -240,7 +240,8 @@ footer {
 }
 
 .active-nav{
-	color: #DBC600;	
+	color: #DBC600;
+	background: #20897F !important;
 }
 
 .degradado{

@@ -38,73 +38,76 @@
     js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=863470693719288";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
-<!-- ................   NAVIGATION BAR   ........................-->
-  <nav id="barra-nav" class="navbar-fixed" style="margin-bottom:10px;">
-    <div class="nav-wrapper be-black z-depth-4">
-      <a href="index.html" class="hide-on-med-and-down brand-logo"><img src="images/cidea.png" width="50%"></a>
-      <a href="index.html" class="hide-on-large-only brand-logo hidden"><img src="images/cidea_movil.png" width="50%"></a>
-      <a href="index.hmtl" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down" id="opciones-nav">
-        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="index.php">Inicio</a></li>
-        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="nosotros.php">Nosotros</a></li>
-        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="documentos.php">Documentos</a></li>
-        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav  active-nav" href="experiencias.php">Experiencias</a></li>
-        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="redecam.php">Redecam</a></li>
-        <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="contacto.php">Contacto</a></li>
-      </ul>
-      <!-- ................  MOBILE NAVIGATION BAR   ........................-->
-      <ul class="side-nav" id="mobile-demo">
-        <li class="titulo2">Menu Cidea</li>
-        <li><a class="mobile-item-nav contenido1" href="index.php" value="hola">Inicio</a></li>
-        <li><a class="mobile-item-nav contenido1" href="nosotros.php">Nosotros</a></li>
-        <li><a class="mobile-item-nav contenido1" href="documentos.php">Documentos</a></li>
-        <li><a class="mobile-item-nav contenido1" href="experiencias.php">Experiencias</a></li>
-        <li><a class="mobile-item-nav contenido1" href="redecam.php">Redecam</a></li>
-        <li><a class="mobile-item-nav contenido1" href="contacto.php">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
-<!-- ................   FLOATING BUTTOM   ........................-->
-<div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
-  <a class="btn-floating btn-large">
-    <i class="material-icons">menu</i>
-  </a>
-  <ul>
-    <li><a class="btn-floating tooltipped" data-position="left" data-delay="10" data-tooltip="Inicio" alt="Nosotros" href="index.php"><i class="material-icons">store</i></a></li>
-    <li><a class="btn-floating red tooltipped" data-position="left" data-delay="10" data-tooltip="Nosotros" alt="Nosotros" href="nosotros.php"><i class="material-icons">supervisor_account</i></a></li>
-    <li><a class="btn-floating blue tooltipped" data-position="left" data-delay="10" data-tooltip="Documentos" alt="Documentos" href="documentos.php"><i class="material-icons">description</i></a></li>
-    <li><a class="btn-floating purple darken-3 tooltipped" data-position="left" data-delay="10" data-tooltip="Experiencias" alt="Experiencias" href="experiencias.php"><i class="material-icons">loyalty</i></a></li>
-    <li><a class="btn-floating green tooltipped" data-position="left" data-delay="10" data-tooltip="Redecam" alt="Redecam" href="redecam.php"><i class="material-icons">brightness_5</i></a></li>
-    <li><a class="btn-floating red accent-3 tooltipped" data-position="left" data-delay="10" data-tooltip="Contacto" alt="Contacto" href="contacto.php"><i class="material-icons">contact_phone</i></a></li>
-  </ul>
+<!--..........imagen corporativa............-->
+<div class="container row" style="padding-top: 15px">
+  <div class="col s12 m7">
+    <a href="index.php"><img class="left-align responsive-img" src="images/cidea2.png"></a>
+  </div>
 </div>
+<!-- ................   NAVIGATION BAR   ........................-->
+<nav class="be-black z-depth-3" >
+<div class="container">
+  <ul class="right hide-on-med-and-down">
+    <li><a class="animation-nav active-nav" href="index.php">Inicio</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="nosotros.php">Nosotros</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="documentos.php">Documentos</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="experiencias.php">Experiencias</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="redecam.php">Redecam</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="contacto.php">Contacto</a></li>
+  </ul>
+  <!-- ................  MOBILE NAVIGATION BAR   ........................-->
+  <ul id="slide-out" class="side-nav">
+    <li><img style="margin-top: 10px" src="images/cidea.png" class="col s12 responsive-img"></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="index.php"><i class=" material-icons orange-text">home</i> Inicio</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light  mobile-item-nav nav-menu" href="nosotros.php"><i class=" material-icons green-text">account_circle</i> Nosotros</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="documentos.php"><i class=" material-icons blue-text">attachment</i> Documentos</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="experiencias.php"><i class=" material-icons brown-text">collections</i> Experiencias</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="redecam.php"><i class=" material-icons purple-text">filter_vintage</i> Redecam</a></li>
+    <div class="divider"></div>
+    <li><a class="waves-effect waves-light mobile-item-nav nav-menu" href="contacto.php"><i class=" material-icons red-text">contacts</i> Contacto</a></li>
+    <div class="divider"></div>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+</div>
+</nav>
 <!-- ................   Contenido   ........................-->
 <div class="row container center-align">
     <img class="image" width="70%" src="images/Imagen5.png">
 </div>
+<!-- ................   imagen parallax ........................-->
+  <div class="parallax-container hide-on-med-and-down">
+    <div class="parallax"><img src="images/somos.jpg"></div>
+  </div>
 <!-- ................   Enlaces Patrocinados   ........................-->
-<div class="row container">
+<div class="row ">
  <ul class="center-align " style="background:#fff;">
-      <li class="col s6 m3 l3 valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Min Ambiente"><img class="responsive-img" alt="Ministerio" style="width:90%;" src="images/patrocinadores/MinAmbiente.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.mincultura.gov.co" target="_blank" title="Min Cultura"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinCultura.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.mintic.gov.co" target="_blank" title="Min TIC"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinTIC.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.mineducacion.gov.co" target="_blank" title="Min Educación"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinEducacion.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Min Ambiente"><img class="responsive-img" alt="Ministerio" style="width:90%;" src="images/patrocinadores/MinAmbiente.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.mincultura.gov.co" target="_blank" title="Min Cultura"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinCultura.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.mintic.gov.co" target="_blank" title="Min TIC"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinTIC.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.mineducacion.gov.co" target="_blank" title="Min Educación"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinEducacion.png"></a></li>
+
+      <li class="col s6 m2 l2 valign"><a href="http://crc.gov.co/" target="_blank" title="CRC"><img class="responsive-img" style="width:75%;" src="images/patrocinadores/CRC.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.colombiaaprende.edu.co" target="_blank" title="Colombia Aprende"><img class="responsive-img" style="width:120%;" src="images/patrocinadores/ColAprende.png"></a></li>   
+      
   </ul>
   </div>
-  <div class="row container ">
+  <div class="row  ">
   <ul class="center-align" style="background:#fff">
-      <li class="col s6 m3 l3 valign"><a href="http://www.cauca.gov.co/" target="_blank" title="Gob. del Cauca"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/GobCauca1.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.sedcauca.gov.co/" target="_blank" title="Gob. del Cauca - Secretaría de Educación"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/GobCaucaSE.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://crc.gov.co/" target="_blank" title="CRC"><img class="responsive-img" style="width:80%;" src="images/patrocinadores/CRC.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.colombiaaprende.edu.co" target="_blank" title="Colombia Aprende"><img class="responsive-img" style="width:120%;" src="images/patrocinadores/ColAprende.png"></a></li>    
-</ul>
-</div>
-<div class="row container ">
-  <ul class="center-align" style="background:#fff">
-      <li class="col s6 m3 l3 valign"><a href="http://www.unicauca.edu.co/" target="_blank" title="Universidad del Cauca"><img class="responsive-img" style="width:25%;" src="images/patrocinadores/unicauca.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://fup.edu.co/" target="_blank" title="Fundación Universitaria de Popayán"><img class="responsive-img" style="width:50%;" src="images/patrocinadores/fup.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.uniautonoma.edu.co/" target="_blank" title="Universidad Autónoma del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/uniautonoma.png"></a></li>
-      <li class="col s6 m3 l3 valign"><a href="http://www.dstec.co" target="_blank" title="DSTec - Soluciones Tecnológicas"><img class="responsive-img" style="width:100%;" src="images/patrocinadores/dstec.png"></a></li>    
+
+      <li class="col s6 m2 l2 valign"><a href="http://www.cauca.gov.co/" target="_blank" title="Gob. del Cauca"><img class="responsive-img" style="width:70%;" src="images/patrocinadores/GobCauca1.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.sedcauca.gov.co/" target="_blank" title="Gob. del Cauca - Secretaría de Educación"><img class="responsive-img" style="width:70%;" src="images/patrocinadores/GobCaucaSE.png"></a></li>
+
+       
+      <li class="col s6 m2 l2 valign"><a href="http://www.unicauca.edu.co/" target="_blank" title="Universidad del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/unicauca.png"></a></li>
+
+      <li class="col s6 m2 l2 valign"><a href="http://www.uniautonoma.edu.co/" target="_blank" title="Universidad Autónoma del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/uniautonoma.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://fup.edu.co/" target="_blank" title="Fundación Universitaria de Popayán"><img class="responsive-img" style="width:50%;" src="images/patrocinadores/fup.png"></a></li>
+      <li class="col s6 m2 l2 valign"><a href="http://www.dstec.co" target="_blank" title="DSTec - Soluciones Tecnológicas"><img class="responsive-img" style="width:100%;" src="images/patrocinadores/dstec.png"></a></li>    
 </ul>
 </div>
 <!-- ................   FOOTER   ........................-->
