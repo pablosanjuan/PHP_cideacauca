@@ -1,5 +1,5 @@
   <!DOCTYPE html>
-  <html>
+  <html lang="es">
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,11 +17,11 @@
       <meta itemprop="image" content="http://cideacauca.com.co/images/cidea.png">
       <meta name="twitter:image" content="http://cideacauca.com.co/images/cidea.png">
       <!--..........FavIcons............-->
-      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/favicon/favicon16.png">
-      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/favicon/favicon64.png">
-      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/favicon/favicon128.png">
+      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/FavIcon/favicon16.png">
+      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/FavIcon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/FavIcon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/FavIcon/favicon64.png">
+      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/FavIcon/favicon128.png">
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
@@ -38,9 +38,19 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 <!--..........imagen corporativa............-->
-<div class="container row" style="padding-top: 15px">
+<div class="container row right-align" style="padding-top: 15px">
   <div class="col s12 m7">
     <a href="index.php"><img class="left-align responsive-img" src="images/cidea2.png"></a>
+  </div>
+  <div class="container col s12 m5 hide-on-med-and-down" style="padding-top: 22px">
+    <div class="col s12 m2 offset-m6 opacos">
+      <a href="index.php"><img class="left-align responsive-img" src="images/facebook.png"></a></div>
+    <div class="col s12 m2 opacos">
+      <a href="index.php"><img class="left-align responsive-img" src="images/youtube.png"></a>
+    </div>
+    <div class="col s12 m2 opacos">
+      <a href="index.php"><img class="left-align responsive-img" src="images/twitter.png"></a>
+    </div>
   </div>
 </div>
 <!-- ................   NAVIGATION BAR   ........................-->
@@ -109,14 +119,14 @@
   </div>
 <!-- ................   redecam ........................-->
   <div class="row container">
-    <div class="col s12 m4 offset-m2">
+    <div class="col s12 m5" style="padding-top: 5px">
     <img src="images/redecam/images/redecam.png" alt="RedeCam" class="responsive-img">
     </div>
-    <div class="col s12 m8">
+    <div class="col s12 m7" style="padding-top: 40px">
     <center>
-    <h6 class="redecam">aqui algo que hable sobre redecam</h6>
+    <h6 class="redecam">Ingresa a nuestra plataforma!!</h6>
     <br>
-      <a class="waves-effect waves-light btn" href="redecam.php"><i class="material-icons right">forward</i>Ingresar</a>
+      <a class="waves-effect waves-light btn btn_verde" href="redecam.php"><i class="material-icons right">forward</i>Ingresar</a>
     </center>
     </div>
   </div>
@@ -129,14 +139,14 @@
 <div class="container row">
       <h1 class="col s12 titulo1 center-align">CIDEA Social</h1>
       <!-- ..........columna facebbok.......... -->
-      <div class="col s12 m5" style="margin-top:20px;">
+      <div class="col s12 m4" style="margin-top:20px;">
         <center>
           <div class="cabecera-facebook text-center">Facebook</div>
         </center>
-        <div class="fb-page" data-href="https://www.facebook.com/CideaCauca/?fref=ts" data-width="1000px" data-height="300px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DSTecOnLine/?fref=ts"><a href="https://www.facebook.com/DSTecOnLine/?fref=ts">DSTec</a></blockquote></div></div>
+        <div class="fb-page" data-href="https://www.facebook.com/CideaCauca/?fref=ts" data-width="990px" data-height="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/DSTecOnLine/?fref=ts"><a href="https://www.facebook.com/DSTecOnLine/?fref=ts">DSTec</a></blockquote></div></div>
       </div>
       <!-- ..........columna youtube.......... -->
-      <div class="col s12 m7" style="margin-top:20px;">
+      <div class="col s12 m8" style="margin-top:20px;">
         <center>
           <div class="cabecera-youtube text-center">Youtube</div>
         </center>
@@ -150,8 +160,8 @@
           $urlinicio=$videosdao->getObject($conn,1);
           $urlnosotros=$videosdao->getObject($conn,2);
         ?>
-        <div class="video-container">
-        <iframe width="auto" height="650" src="<?php echo($urlinicio->getUrl());?>" allowfullscreen></iframe>
+        <div class="video-container video">
+        <iframe width="auto" src="<?php echo($urlinicio->getUrl());?>" allowfullscreen></iframe>
         </div>
       </div>
 </div>
@@ -178,7 +188,6 @@
 
       <li class="col s6 m2 l2 valign"><a href="http://www.cauca.gov.co/" target="_blank" title="Gob. del Cauca"><img class="responsive-img" style="width:70%;" src="images/patrocinadores/GobCauca1.png"></a></li>
       <li class="col s6 m2 l2 valign"><a href="http://www.sedcauca.gov.co/" target="_blank" title="Gob. del Cauca - Secretaría de Educación"><img class="responsive-img" style="width:70%;" src="images/patrocinadores/GobCaucaSE.png"></a></li>
-
        
       <li class="col s6 m2 l2 valign"><a href="http://www.unicauca.edu.co/" target="_blank" title="Universidad del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/unicauca.png"></a></li>
 
@@ -187,7 +196,6 @@
       <li class="col s6 m2 l2 valign"><a href="http://www.dstec.co" target="_blank" title="DSTec - Soluciones Tecnológicas"><img class="responsive-img" style="width:100%;" src="images/patrocinadores/dstec.png"></a></li>    
 </ul>
 </div>
-
 <!-- ................   FOOTER   ........................-->
 <footer class="be-grey">
   <div class="container">

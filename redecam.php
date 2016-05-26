@@ -19,11 +19,11 @@
       <meta itemprop="image" content="http://cideacauca.com.co/images/cidea.png">
       <meta name="twitter:image" content="http://cideacauca.com.co/images/cidea.png">
       <!--..........FavIcons............-->
-      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/favicon/favicon16.png">
-      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/favicon/favicon64.png">
-      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/favicon/favicon128.png">
+      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/FavIcon/favicon16.png">
+      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/FavIcon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/FavIcon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/FavIcon/favicon64.png">
+      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/FavIcon/favicon128.png">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
     </head>
@@ -47,11 +47,11 @@
 <nav class="be-black z-depth-3" >
 <div class="container">
   <ul class="right hide-on-med-and-down">
-    <li><a class="animation-nav active-nav" href="index.php">Inicio</a></li>
+    <li><a class="animation-nav" href="index.php">Inicio</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="nosotros.php">Nosotros</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="documentos.php">Documentos</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="experiencias.php">Experiencias</a></li>
-    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="redecam.php">Redecam</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav active-nav" href="redecam.php">Redecam</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="contacto.php">Contacto</a></li>
   </ul>
   <!-- ................  MOBILE NAVIGATION BAR   ........................-->

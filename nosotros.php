@@ -17,11 +17,11 @@
       <meta itemprop="image" content="http://cideacauca.com.co/images/cidea.png">
       <meta name="twitter:image" content="http://cideacauca.com.co/images/cidea.png">
       <!--..........FavIcons............-->
-      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/favicon/favicon16.png">
-      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/favicon/favicon64.png">
-      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/favicon/favicon128.png">
+      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/FavIcon/favicon16.png">
+      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/FavIcon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/FavIcon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/FavIcon/favicon64.png">
+      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/FavIcon/favicon128.png">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
     </head>
@@ -46,8 +46,8 @@
 <nav class="be-black z-depth-3" >
 <div class="container">
   <ul class="right hide-on-med-and-down">
-    <li><a class="animation-nav active-nav" href="index.php">Inicio</a></li>
-    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="nosotros.php">Nosotros</a></li>
+    <li><a class="animation-nav" href="index.php">Inicio</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav active-nav" href="nosotros.php">Nosotros</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="documentos.php">Documentos</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="experiencias.php">Experiencias</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="redecam.php">Redecam</a></li>
@@ -102,22 +102,22 @@
     <div class="parallax"><img src="images/somos.jpg"></div>
   </div>
   <!-- ................   mision ........................-->
-    <h1 class="titulosub center-align row container col s12 m12 l12" id="fade2-tit" style="opacity:0; padding-top:20px">Misión</h1>
+    <h1 class="titulosub center-align row container col s12 m12 l12" id="fade2-tit" style=" padding-top:20px">Misión</h1>
   <div class="row container valign-wrapper" style="padding-top:20px">
     <div class="row col s12 m12 l4">
       <p class="centrartext"><?php echo($mision->getContenido());?></p>
     </div>
     <div class="col l2"></div>
-    <img src="images/mision.jpg" class="col s12 m12 l6 hide-on-small-only responsive-img  valign" id="fade2" style="opacity:0;">
+    <img src="images/mision.jpg" class="col s12 m12 l6 hide-on-small-only responsive-img  valign" id="fade2" ">
   </div>
   <!-- ................   imagen parallax ........................-->
   <div class="parallax-container hide-on-med-and-down">
     <div class="parallax"><img src="images/somos.jpg"></div>
   </div>
   <!-- ................   vision ........................-->
-  <h1 class="titulosub center-align row container col s12 m12 l4" id="fade3-tit" style="opacity:0;padding-top:20px">Visión</h1>
+  <h1 class="titulosub center-align row container col s12 m12 l4" id="fade3-tit" style="padding-top:20px">Visión</h1>
   <div class="row container valign-wrapper" style="padding-top:20px">
-    <img src="images/vision.jpg" class="col s12 m12 l6 hide-on-small-only responsive-img  valign" id="fade3" style="opacity:0;">
+    <img src="images/vision.jpg" class="col s12 m12 l6 hide-on-small-only responsive-img  valign" id="fade3" style="">
     <div class="col l2"></div>
     <div class="row col s12 m12 l4">
       <p class="centrartext"><?php echo($vision->getContenido());?></p>
@@ -149,7 +149,7 @@
   </div>
 <!--...........FUNCIONES............-->
   <div class="row container">
-    <h1 class="titulosub col s12 m12 l12 centrartext" id="fade-func" style="opacity:0;">Funciones</h1>
+    <h1 class="titulosub col s12 m12 l12 centrartext" id="fade-func">Funciones</h1>
     <ul class="col s12 m6 l6">
       <li><p class="centrartext">1. Aunar esfuerzos conceptuales, metodológicos, técnicos, financieros y de proyección, entre las diferentes instituciones con competencia y responsabilidad en el área de la Educación Ambiental, con el fin de propiciar estrategias, acciones y espacios para la formación de seres críticos, reflexivos y comprometidos con el desarrollo ambiental sostenible de la región.</p></li>
       <li><p class="centrartext">2. Asesorar, acompañar y  apoyar la construcción del  Plan de Educación Ambiental con enfoque diferencial para el Departamento,  así como direccionar  y hacer seguimiento a su implementación. </p></li>
@@ -170,7 +170,7 @@
   </div>
   <!-- ................   Integrantes ........................-->
   <div class="row container">
-    <h1 class="titulosub col s12 m12 l12 centrartext" id="fade-integ" style="opacity:0;">Integrantes</h1>
+    <h1 class="titulosub col s12 m12 l12 centrartext">Integrantes</h1>
       <p class="centrartext">
         <ul class="col s12 m6 l6" >
           <li class="integrantes centrartext">Gobernador del Departamento o su delegado</li>
@@ -274,16 +274,7 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/funciones.js"></script>
-    <script type="text/javascript">
-    var options = [
-    {selector: '#fade2-tit', offset: 200, callback: 'Materialize.fadeInImage("#fade2-tit")' },
-    {selector: '#fade2', offset: 200, callback: 'Materialize.fadeInImage("#fade2")' },
-    {selector: '#fade3', offset: 200, callback: 'Materialize.fadeInImage("#fade3")' },
-    {selector: '#fade3-tit', offset: 300, callback: 'Materialize.fadeInImage("#fade3-tit")' },
-    {selector: '#fade-func', offset: 300, callback: 'Materialize.fadeInImage("#fade-func")' },
-    {selector: '#fade-integ', offset: 200, callback: 'Materialize.fadeInImage("#fade-integ")' },
-    ];
-    Materialize.scrollFire(options);
+    <script type="text/javascript"
 
     var player;
     function onYouTubeIframeAPIReady() {

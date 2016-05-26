@@ -5,17 +5,6 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>
-      <link type='text/css' rel='stylesheet' href='css/liquidcarousel.css' />
-      <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-      <script type="text/javascript" src="js/jquery.liquidcarousel.pack.js"></script>
-      <script type="text/javascript">
-      <!--
-        $(document).ready(function() {
-          $('#liquid1').liquidcarousel({height:130, duration:900, hidearrows:false, auto: true});
-        });
-      -->
-      </script>
-
       <!--..........metas............-->
       <title>CIDEA Cauca</title>
       <meta property="og:title" content="CIDEA Cauca" />
@@ -28,15 +17,15 @@
       <meta itemprop="image" content="http://cideacauca.com.co/images/cidea.png">
       <meta name="twitter:image" content="http://cideacauca.com.co/images/cidea.png">
       <!--..........FavIcons............-->
-      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/favicon/favicon16.png">
-      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/favicon/favicon32.png">
-      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/favicon/favicon64.png">
-      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/favicon/favicon128.png">
+      <link rel="icon" type="image/ico" sizes="16x16" href="http://cideacauca.com.co/images/FavIcon/favicon16.png">
+      <link rel="icon" type="image/ico" sizes="32x32" href="http://cideacauca.com.co/images/FavIcon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="48x48" href="http://cideacauca.com.co/images/FavIcon/favicon32.png">
+      <link rel="icon" type="image/ico" sizes="64x64" href="http://cideacauca.com.co/images/FavIcon/favicon64.png">
+      <link rel="icon" type="image/ico" sizes="128x128" href="http://cideacauca.com.co/images/FavIcon/favicon128.png">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
     </head>
-<body onload="initialize(), Materialize.showStaggeredList('#opciones-nav')">
+<body onload="initialize()">
 
 <!-- ................   INICIALIZACION DE FACEBOOK   ........................-->
   <div id="fb-root"></div>
@@ -57,9 +46,9 @@
 <nav class="be-black z-depth-3" >
 <div class="container">
   <ul class="right hide-on-med-and-down">
-    <li><a class="animation-nav active-nav" href="index.php">Inicio</a></li>
+    <li><a class="animation-nav" href="index.php">Inicio</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="nosotros.php">Nosotros</a></li>
-    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="documentos.php">Documentos</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav active-nav" href="documentos.php">Documentos</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="experiencias.php">Experiencias</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="redecam.php">Redecam</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="contacto.php">Contacto</a></li>
@@ -86,11 +75,13 @@
 </nav>
 <!-- ................   Contenido   ........................-->
 </br></br>
+<!-- xxxxxxxxxxxxxxxxx Documentos de interés xxxxxxxxxxx -->
 <h1 class="container contenido1  col s12 m12 l12 center-align">Documentos de interés</h1>
 </br>
 <h1 class="container titulosub col s12 m12 l12">Normatividad</h1>
+
 <div class="row container">
-<ul class="collapsible col s12" data-collapsible="accordion">
+  <ul class="collapsible col s12" data-collapsible="accordion">
   <li class="">
     <div class="collapsible-header">
       <i class="material-icons">assignment</i>
@@ -107,50 +98,52 @@
       <i class="material-icons">assignment</i>
       Ley 115 de 1994 
       <a class="secondary-content valign-wrapper"><i class="material-icons valign">expand_more</i></a>
-      </div>
+    </div>
       <div class="collapsible-body" style="display: none;">
       <p>"Por la cual se expide la ley general de educación"</p>  
       <a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
-    <div class="collapsible-body" style="display: none;">
+    </div>
   </li>
   <li class="">
-  <div class="collapsible-header">
+    <div class="collapsible-header">
       <i class="material-icons">assignment</i>
       Decreto 1743 de 1994 
       <a class="secondary-content valign-wrapper"><i class="material-icons valign">expand_more</i></a>
-      </div>
-      <div class="collapsible-body" style="display: none;">
+    </div>
+    <div class="collapsible-body" style="display: none;">
       <p>"Por el cual se instituye el Proyecto de Educación Ambiental para todos los niveles de educación formal, se fijan criterios para la promoción de  ducación ambiental no formal e informal y se establecen los mecanismos de coordinación entre el Ministerio de Educación nacional y el Ministerio del Medio Ambiente"</p>  
       <a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
-    <div class="collapsible-body" style="display: none;">
+    </div>
   </li>
   <li class="">
-  <div class="collapsible-header">
+    <div class="collapsible-header">
       <i class="material-icons">assignment</i>
       Ordenanza No 102 DE 2014  
       <a class="secondary-content valign-wrapper"><i class="material-icons valign">expand_more</i></a>
-      </div>
-      <div class="collapsible-body" style="display: none;">
+    </div>
+    <div class="collapsible-body" style="display: none;">
       <p>"Por la cual se crea el comité técnico interinstitucional de Educación Ambiental del Departamento del Cauca"</p>  
       <a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
-    <div class="collapsible-body" style="display: none;">
+    </div>
   </li>
-</ul>
-<h1 class="titulosub col s12 m12 l12 centrartext">Otros Documentos De Interes</h1>
-<ul class="collapsible col s12" data-collapsible="accordion">
-  <li class="">
-  <div class="collapsible-header">
+  </ul>
+</div>
+  <!-- xxxxxxxxxxxxxxxxx segundo acordeon - Otros Documentos De Interes xxxxxxxxxxx -->
+<div class="row container">
+  <h1 class="titulosub col s12 m12 l12 centrartext">Otros Documentos De Interes</h1>
+  <ul class="collapsible col s12" data-collapsible="accordion">
+    <li class="">
+    <div class="collapsible-header">
       <i class="material-icons">assignment</i>
       Politica Nacional de Educación ambiental 2002  
-      <a class="secondary-content valign-wrapper"><i class="material-icons valign">expand_more</i></a>
-      </div>
-      <div class="collapsible-body" style="display: none;">
+      <a class="secondary-content valign-wrapper"><i class="material-icons valign">expand_more</i></a>  
+    </div>
+    <div class="collapsible-body" style="display: none;">
       <p>"Por la cual se crea el comité técnico interinstitucional de Educación Ambiental del Departamento del Cauca"</p>  
       <a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
-    <div class="collapsible-body" style="display: none;">
-  </li>
-</ul>
-</br></br>
+    </div>
+    </li>
+  </ul>
 </div>
 <!-- ................   imagen parallax ........................-->
   <div class="parallax-container hide-on-med-and-down">
@@ -227,17 +220,5 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/funciones.js"></script>
-    
-    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.liquidcarousel.pack.js"></script>
-    <script type="text/javascript">
-
-    <script type="text/javascript">
-   var options = [
-    {selector: '#vinculos', offset: 350, callback: 'Materialize.showStaggeredList("#vinculos")' },
-    {selector: '#vinculos2', offset: 300, callback: 'Materialize.showStaggeredList("#vinculos2")' },
-    ];
-    Materialize.scrollFire(options);
-    </script>
  </body>
 </html>

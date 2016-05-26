@@ -45,6 +45,10 @@ footer {
 	position: fixed !important;
 }
 
+.video{
+	height: 100px !important;
+}
+
 .be-blue{
 	background: #00B287;
 	border: solid 2px #00B287;
@@ -54,11 +58,11 @@ footer {
 }
 
 .be-black{
-	border: solid 5px #26A69A;
+	border: solid 5px #4CAF50;
 	border-right: none;
 	border-left: none;
 	border-top: none;
-	background:#26A69A;
+	background:#4CAF50;
 }
 
 .be-grey{
@@ -67,6 +71,10 @@ footer {
 	border-left: none;
 	border-top: none;
 	background:#262626;
+}
+
+.btn_verde{
+	background: #A6C94E !important;
 }
 
 .be-dark-black{
@@ -96,12 +104,21 @@ footer {
 	font-family: tittle-text-bold;
 }
 
+.opacos{
+	opacity: 0.1;
+}
+
+.opacos:hover{
+	opacity: 1;	
+}
+
+
 .animation-nav{
 	position: relative;
 	color: #fff;
 	text-decoration: none;
-	font-size: 16px;
-	font-family: tittle-text-bold;
+	font-size:18px;
+	font-family: tittle-text-regular;
 }
 
 .animation-nav:hover {
@@ -146,7 +163,7 @@ footer {
 }
 
 .cabecera-youtube{
-	background: #f00;
+	background: #D2282E;
 	font-family: tittle-text-regular;
 	color:#fff;
 	font-size: 20px;
@@ -241,7 +258,7 @@ footer {
 
 .active-nav{
 	color: #DBC600;
-	background: #20897F !important;
+	background: #449D48 !important;
 }
 
 .degradado{
@@ -303,7 +320,6 @@ footer {
 	font-family: tittle-text-regular;
 	color:#16a085;
 	font-size: 38px;
-	text-decoration: underline;
 }
 .titulosub2{
 	font-family: tittle-text-regular;
