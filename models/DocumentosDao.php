@@ -105,6 +105,26 @@ class DocumentosDao {
           return $searchResults;
     }
 
+    function loadnormatividad(&$conn) {
+
+
+          $sql = "SELECT * FROM documentos WHERE tipo = '0' ORDER BY idDocumento ASC ";
+
+          $searchResults = $this->listQuery($conn, $sql);
+
+          return $searchResults;
+    }
+
+    function loadotros(&$conn) {
+
+
+          $sql = "SELECT * FROM documentos WHERE tipo = '1' ORDER BY idDocumento ASC ";
+
+          $searchResults = $this->listQuery($conn, $sql);
+
+          return $searchResults;
+    }
+
 
 
     /**

@@ -2,6 +2,14 @@ $(document).ready(function(){
   $('.slider').slider({full_width: false});
 });
 
+function previus(){
+  $('.slider').slider('prev');
+}
+
+function next(){
+  $('.slider').slider('next');
+}
+
 $(".button-collapse").sideNav();
 
 function initialize() {

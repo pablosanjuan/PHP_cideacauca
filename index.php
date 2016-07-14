@@ -44,12 +44,12 @@
   </div>
   <div class="container col s12 m5 hide-on-med-and-down" style="padding-top: 22px">
     <div class="col s12 m2 offset-m6 opacos">
-      <a href="index.php"><img class="left-align responsive-img" src="images/facebook.png"></a></div>
+      <a target="_blanck" href="https://www.facebook.com/CideaCauca/"><img class="left-align responsive-img" src="images/facebook.png"></a></div>
     <div class="col s12 m2 opacos">
-      <a href="index.php"><img class="left-align responsive-img" src="images/youtube.png"></a>
+      <a target="_blanck" href="https://www.youtube.com/channel/UCGRpTPDYmTILxLHdQ1WM3sg"><img class="left-align responsive-img" src="images/youtube.png"></a>
     </div>
     <div class="col s12 m2 opacos">
-      <a href="index.php"><img class="left-align responsive-img" src="images/twitter.png"></a>
+      <a target="_blanck" href="https://www.twitter.com/CideaCauca/"><img class="left-align responsive-img" src="images/twitter.png"></a>
     </div>
   </div>
 </div>
@@ -226,7 +226,7 @@
       <div class="col l3 m3 s6" style="margin-top:20px;">
         <h5 class="titulo-informativo">Redes Sociales</h5>
           <a style="margin:5px" class="valign-wrapper" href="http://www.facebook.com/CideaCauca/" target="_blank"><span class="valign" ><img class="valign" width="60%" src="images/facebook.png"></span> Facebook</a>
-          <a style="margin:5px" class="valign-wrapper" href="http://www.facebook.com/CideaCauca/" target="_blank"><span><img class="valign" width="70%" src="images/twitter.png"></span> Twitter</a>
+          <a style="margin:5px" class="valign-wrapper" href="https://www.twitter.com/CideaCauca/" target="_blank"><span><img class="valign" width="70%" src="images/twitter.png"></span> Twitter</a>
           <a style="margin:5px" class="valign-wrapper" href="https://www.youtube.com/channel/UCGRpTPDYmTILxLHdQ1WM3sg" target="_blank"><span><img class="valign" width="70%" src="images/youtube.png"></span> Youtube</a>
       </div>
   </div>
@@ -234,7 +234,7 @@
 <div class="be-dark-black">
     <div>
       Desarrollado por DSTec Soluciones Tecnologicas
-      <a class="grey-text text-lighten-4 right" href="http://dstec.co/">DSTEC.co</a>
+      <a class="grey-text text-lighten-4 right" target="_blanck" href="http://dstec.co/">DSTEC.co</a>
     </div>
 </div>
 <!-- ................   LIBRERIAS  JQUERY   ........................-->

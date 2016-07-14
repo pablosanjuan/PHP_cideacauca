@@ -85,69 +85,28 @@
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 </div>
 </nav>
-<!-- ................   Contenido   ........................-->
-<div class="row container center-align">
-<br><br>
-<h1 class="container contenido1  col s12 m12 l12 center-align">Experiencia Realizadas</h1>
 <br><br>
 
-<?php 
-  $i=0;
-  for ($i=0; $i<6 ; $i++) { 
-   ?>
+<div class="row container">
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img class="" src="images/somos.jpg">
+      </li>
+      <li>
+        <img class="" src="images/somos.jpg">
+      </li>
+      <li>
+        <img class="" src="images/somos.jpg">
+      </li>
+      <li>
+        <img class="" src="images/somos.jpg">
+      </li>
+    </ul>
 
-  <div class="col s12 m3">
-    <div class="card small hoverable">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="images/experiencias/exp1.jpg">
-      </div>
-      <div class="card-content">
-        <span class=" activator green-text">Visitamos el Zoologico de cali</span>
-        <div class="divider"></div>
-        <br>
-        <p><a href="album.php">Ver Album</a></p>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">Visitamos el Zoologico de cali<i class="material-icons right">close</i></span>
-        <p>se realizo la visita con algunos miembrros de nuestro grupo al museo de cali. visita con algunos miembrros de nuestro grupo al museo de cali. visita con algunos miembrros de nuestro grupo al museo de cali</p>
-      </div>
-    </div>
+<a class="waves-effect waves-light btn" onclick="previus()">Atras</a>
+<a class="waves-effect waves-light btn" onclick="next()">Siguiente</a>
   </div>
-
-<?php
-}
-?>
-</div>
-<!-- ................   imagen parallax ........................-->
-  <div class="parallax-container hide-on-med-and-down">
-    <div class="parallax"><img src="images/somos.jpg"></div>
-  </div>
-<!-- ................   Enlaces Patrocinados   ........................-->
-<div class="row ">
- <ul class="center-align " style="background:#fff;">
-      <li class="col s6 m2 l2 valign"><a href="https://www.minambiente.gov.co/" target="_blank" title="Min Ambiente"><img class="responsive-img" alt="Ministerio" style="width:90%;" src="images/patrocinadores/MinAmbiente.png"></a></li>
-      <li class="col s6 m2 l2 valign"><a href="http://www.mincultura.gov.co" target="_blank" title="Min Cultura"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinCultura.png"></a></li>
-      <li class="col s6 m2 l2 valign"><a href="http://www.mintic.gov.co" target="_blank" title="Min TIC"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinTIC.png"></a></li>
-      <li class="col s6 m2 l2 valign"><a href="http://www.mineducacion.gov.co" target="_blank" title="Min Educación"><img class="responsive-img" style="width:90%;" src="images/patrocinadores/MinEducacion.png"></a></li>
-
-      <li class="col s6 m2 l2 valign"><a href="http://crc.gov.co/" target="_blank" title="CRC"><img class="responsive-img" style="width:75%;" src="images/patrocinadores/CRC.png"></a></li>
-      <li class="col s6 m2 l2 valign"><a href="http://www.colombiaaprende.edu.co" target="_blank" title="Colombia Aprende"><img class="responsive-img" style="width:120%;" src="images/patrocinadores/ColAprende.png"></a></li>   
-      
-  </ul>
-  </div>
-  <div class="row  ">
-  <ul class="center-align" style="background:#fff">
-
-      <li class="col s6 m2 l2 valign"><a href="http://www.cauca.gov.co/" target="_blank" title="Gob. del Cauca"><img class="responsive-img" style="width:70%;" src="images/patrocinadores/GobCauca1.png"></a></li>
-      <li class="col s6 m2 l2 valign"><a href="http://www.sedcauca.gov.co/" target="_blank" title="Gob. del Cauca - Secretaría de Educación"><img class="responsive-img" style="width:70%;" src="images/patrocinadores/GobCaucaSE.png"></a></li>
-
-       
-      <li class="col s6 m2 l2 valign"><a href="http://www.unicauca.edu.co/" target="_blank" title="Universidad del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/unicauca.png"></a></li>
-
-      <li class="col s6 m2 l2 valign"><a href="http://www.uniautonoma.edu.co/" target="_blank" title="Universidad Autónoma del Cauca"><img class="responsive-img" style="width:35%;" src="images/patrocinadores/uniautonoma.png"></a></li>
-      <li class="col s6 m2 l2 valign"><a href="http://fup.edu.co/" target="_blank" title="Fundación Universitaria de Popayán"><img class="responsive-img" style="width:50%;" src="images/patrocinadores/fup.png"></a></li>
-      <li class="col s6 m2 l2 valign"><a href="http://www.dstec.co" target="_blank" title="DSTec - Soluciones Tecnológicas"><img class="responsive-img" style="width:100%;" src="images/patrocinadores/dstec.png"></a></li>    
-</ul>
 </div>
 <!-- ................   FOOTER   ........................-->
 <footer class="be-grey">

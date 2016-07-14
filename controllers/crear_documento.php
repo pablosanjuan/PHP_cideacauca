@@ -11,11 +11,13 @@
 	$documento=new Documentos();
 	$dirdoc=$_FILES["doc"]["tmp_name"];
 	$formatodoc=substr($_FILES["doc"]["name"], strrpos($_FILES["doc"]["name"], ".") );  //Obtener la última aparición del punto y por consiguiente, el formato
+	$destinoruta=substr($docLocation, 3);
 	$destinodoc=$docLocation."/doc_".$titulo.$formatodoc;
+	$destino=$destinoruta."/doc_".$titulo.$formatodoc;
 	$documento->setTitulo($titulo);
 	$documento->setDescripcion($descripcion);
 	$documento->setTipo($tipo);
-	$documento->setRuta($destinodoc);
+	$documento->setRuta($destino);
 	$correcto=true;
 	if($docdao->create($conn,$documento)&&move_uploaded_file($dirdoc, $destinodoc))
 	{

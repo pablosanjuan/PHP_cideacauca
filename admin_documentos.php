@@ -31,8 +31,12 @@
     <img width="20%" src="images/cidea.png">
     <h5 class="titulo1">PANEL DE ADMINISTRACION</h5>
   </div>
+<!-- ................   CERRAR SESION  ........................-->
+  <div class="container right-align col s12 m12 l12 row">
+    <a href="index.php" class="cerrar right"><i class="material-icons left">close</i>Cerrar Sesion</a>
+  </div>
 <!-- ................   ESPACIO AZUL   ........................-->
-  <div class="degradado center-align ">
+  <div class="degradado center-align col s12 m12 l12">
     <h5 class="titulo2-blanco">Cidea Cauca</h5>
   </div>
 <!-- ................   NAV MOBILE   ........................-->
@@ -40,7 +44,6 @@
   <ul id="slide-out" class="side-nav">
     <li class="titulo2">Opciones</li>
     <li><a href="admin_banner.php" class="collection-item titulo4">Banner</a></li>
-    <li><a href="admin_noticias.php" class="collection-item titulo4">Noticias</a></li>
     <li><a href="admin_institucional.php" class="collection-item titulo4">Institucional</a></li>
     <li><a href="admin_documentos.php" class="collection-item titulo4">Documentos de Interes</a></li>
     <li><a href="admin_experiencias.php" class="collection-item titulo4">Experiencias</a></li>
@@ -54,7 +57,6 @@
   <div class="collection col s3 hide-on-med-and-down">
     <a class="collection-header titulo2">Opciones</a>
     <a href="admin_banner.php" class="collection-item titulo4">Banner</a>
-    <a href="admin_noticias.php" class="collection-item titulo4">Noticias</a>
     <a href="admin_institucional.php" class="collection-item titulo4">Institucional</a>
     <a href="admin_documentos.php" class="collection-item titulo4">Documentos de Interes</a>
     <a href="admin_experiencias.php" class="collection-item titulo4">Experiencias</a>
@@ -93,10 +95,10 @@
         <div class="file-field input-field">
           <div class="btn">
             <span>Archivo</span>
-            <input type="file" id="doc" name="doc" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Solo Archivos con extension PDF - DOC - DOCX - JPG">
+            <input type="file" id="doc" name="doc" class="tooltipped" data-position="top" data-delay="50" data-tooltip="Solo archivos con extensión: .pdf .doc .docx .xls .xlsx .ppt .pptx .jpg .png">
           </div>
           <div class="file-path-wrapper">
-            <input class="file-path validate tooltipped" name="doc2" id="doc2" type="text" data-position="bottom" data-delay="50" data-tooltip="Solo Archivos con extension PDF - DOC - DOCX - JPG">
+            <input class="file-path validate tooltipped" name="doc2" id="doc2" type="text" data-position="bottom" data-delay="50" data-tooltip="Solo archivos con extensión: .pdf .doc .docx .xls .xlsx .ppt .pptx .jpg .png">
           </div>
         </div>
         <br>

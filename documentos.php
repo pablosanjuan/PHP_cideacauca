@@ -26,7 +26,6 @@
       <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
     </head>
 <body onload="initialize()">
-
 <!-- ................   INICIALIZACION DE FACEBOOK   ........................-->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -37,9 +36,19 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 <!--..........imagen corporativa............-->
-<div class="container row" style="padding-top: 15px">
+<div class="container row right-align" style="padding-top: 15px">
   <div class="col s12 m7">
     <a href="index.php"><img class="left-align responsive-img" src="images/cidea2.png"></a>
+  </div>
+  <div class="container col s12 m5 hide-on-med-and-down" style="padding-top: 22px">
+    <div class="col s12 m2 offset-m6 opacos">
+      <a target="_blanck" href="https://www.facebook.com/CideaCauca/"><img class="left-align responsive-img" src="images/facebook.png"></a></div>
+    <div class="col s12 m2 opacos">
+      <a target="_blanck" href="https://www.youtube.com/channel/UCGRpTPDYmTILxLHdQ1WM3sg"><img class="left-align responsive-img" src="images/youtube.png"></a>
+    </div>
+    <div class="col s12 m2 opacos">
+      <a target="_blanck" href="https://www.twitter.com/CideaCauca/"><img class="left-align responsive-img" src="images/twitter.png"></a>
+    </div>
   </div>
 </div>
 <!-- ................   NAVIGATION BAR   ........................-->
@@ -48,7 +57,7 @@
   <ul class="right hide-on-med-and-down">
     <li><a class="animation-nav" href="index.php">Inicio</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="nosotros.php">Nosotros</a></li>
-    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav active-nav" href="documentos.php">Documentos</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="active-nav animation-nav" href="documentos.php">Documentos</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="experiencias.php">Experiencias</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="redecam.php">Redecam</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="contacto.php">Contacto</a></li>
@@ -82,6 +91,7 @@
 
 <div class="row container">
   <ul class="collapsible col s12" data-collapsible="accordion">
+
   <li class="">
     <div class="collapsible-header">
       <i class="material-icons">assignment</i>
@@ -93,6 +103,7 @@
       <a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
     </div>
   </li>
+
   <li class="">
     <div class="collapsible-header">
       <i class="material-icons">assignment</i>
@@ -104,6 +115,7 @@
       <a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
     </div>
   </li>
+
   <li class="">
     <div class="collapsible-header">
       <i class="material-icons">assignment</i>
@@ -115,6 +127,7 @@
       <a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
     </div>
   </li>
+
   <li class="">
     <div class="collapsible-header">
       <i class="material-icons">assignment</i>
@@ -126,23 +139,73 @@
       <a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
     </div>
   </li>
+    <?php
+    include_once("models/Datasource.php");
+    include_once("models/DocumentosDao.php");
+    include_once("models/Documentos.php");
+    include_once("models/Variables.php");
+    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+    $docdao=new DocumentosDao();
+    $docunorm=$docdao->loadotros($conn);
+        for($i=0;$i<count($docunorm);$i++)
+        {
+    ?>
+    <li class="">
+    <div class="collapsible-header">
+      <i class="material-icons">assignment</i>
+      <?php echo($docunorm[$i]->getTitulo()) ?>
+      <a class="secondary-content valign-wrapper"><i class="material-icons valign">expand_more</i></a>
+    </div>
+    <div class="collapsible-body" style="display: none;">
+      <p><?php echo($docunorm[$i]->getDescripcion()) ?></p>  
+      <a href="<?php echo($docunorm[$i]->getRuta()) ?>" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
+    </div>
+    </li>
+    <?php
+    }
+    ?>
   </ul>
 </div>
   <!-- xxxxxxxxxxxxxxxxx segundo acordeon - Otros Documentos De Interes xxxxxxxxxxx -->
-<div class="row container">
+  <div class="row container">
   <h1 class="titulosub col s12 m12 l12 centrartext">Otros Documentos De Interes</h1>
   <ul class="collapsible col s12" data-collapsible="accordion">
     <li class="">
     <div class="collapsible-header">
       <i class="material-icons">assignment</i>
       Politica Nacional de Educación ambiental 2002  
-      <a class="secondary-content valign-wrapper"><i class="material-icons valign">expand_more</i></a>  
+      <a class="secondary-content valign-wrapper"><i class="material-icons valign">expand_more</i></a>
     </div>
     <div class="collapsible-body" style="display: none;">
       <p>"Por la cual se crea el comité técnico interinstitucional de Educación Ambiental del Departamento del Cauca"</p>  
       <a href="index.html" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
     </div>
     </li>
+    <?php
+    include_once("models/Datasource.php");
+    include_once("models/DocumentosDao.php");
+    include_once("models/Documentos.php");
+    include_once("models/Variables.php");
+    $conn=new Datasource($dbhost,$dbName,$dbUser,$dbPassword);  
+    $docdao=new DocumentosDao();
+    $docu=$docdao->loadnormatividad($conn);
+        for($i=0;$i<count($docu);$i++)
+        {
+    ?>
+    <li class="">
+    <div class="collapsible-header">
+      <i class="material-icons">assignment</i>
+      <?php echo($docu[$i]->getTitulo()) ?>
+      <a class="secondary-content valign-wrapper"><i class="material-icons valign">expand_more</i></a>
+    </div>
+    <div class="collapsible-body" style="display: none;">
+      <p><?php echo($docu[$i]->getDescripcion()) ?></p>  
+      <a href="<?php echo($docu[$i]->getRuta()) ?>" class="secondary-content valign-wrapper"><i class="material-icons valign">file_download</i>Descargar</a><br><br>
+    </div>
+    </li>
+    <?php
+    }
+    ?>
   </ul>
 </div>
 <!-- ................   imagen parallax ........................-->

@@ -38,9 +38,19 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 <!--..........imagen corporativa............-->
-<div class="container row" style="padding-top: 15px">
+<div class="container row right-align" style="padding-top: 15px">
   <div class="col s12 m7">
     <a href="index.php"><img class="left-align responsive-img" src="images/cidea2.png"></a>
+  </div>
+  <div class="container col s12 m5 hide-on-med-and-down" style="padding-top: 22px">
+    <div class="col s12 m2 offset-m6 opacos">
+      <a target="_blanck" href="https://www.facebook.com/CideaCauca/"><img class="left-align responsive-img" src="images/facebook.png"></a></div>
+    <div class="col s12 m2 opacos">
+      <a target="_blanck" href="https://www.youtube.com/channel/UCGRpTPDYmTILxLHdQ1WM3sg"><img class="left-align responsive-img" src="images/youtube.png"></a>
+    </div>
+    <div class="col s12 m2 opacos">
+      <a target="_blanck" href="https://www.twitter.com/CideaCauca/"><img class="left-align responsive-img" src="images/twitter.png"></a>
+    </div>
   </div>
 </div>
 <!-- ................   NAVIGATION BAR   ........................-->
@@ -52,7 +62,7 @@
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="documentos.php">Documentos</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="experiencias.php">Experiencias</a></li>
     <li class="divider-vertical-second-menu"></li><li><a class="animation-nav" href="redecam.php">Redecam</a></li>
-    <li class="divider-vertical-second-menu"></li><li><a class="animation-nav active-nav" href="contacto.php">Contacto</a></li>
+    <li class="divider-vertical-second-menu"></li><li><a class="active-nav animation-nav" href="contacto.php">Contacto</a></li>
   </ul>
   <!-- ................  MOBILE NAVIGATION BAR   ........................-->
   <ul id="slide-out" class="side-nav">
